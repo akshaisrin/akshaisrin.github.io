@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b2704fcf.css",
+    "main.js": "/static/js/main.54d2d56f.js",
+    "static/js/488.9561f9b8.chunk.js": "/static/js/488.9561f9b8.chunk.js",
+    "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
+    "static/media/game.png": "/static/media/game.49ed238b414c2e35abd7.png",
+    "static/media/CalcMaestro.png": "/static/media/CalcMaestro.7ad96fe64608b8af2bec.png",
+    "static/media/mathmaestro2.png": "/static/media/mathmaestro2.bdd02d165941dc446248.png",
+    "static/media/website.jpg": "/static/media/website.fa416c8fa023ea7360d6.jpg",
+    "static/media/FIU.jpg": "/static/media/FIU.a29f8b2a377e3d5b073e.jpg",
+    "static/media/AkshaiSrinivasan-Resume.pdf": "/static/media/AkshaiSrinivasan-Resume.73802b070145c5cd723a.pdf",
+    "static/media/Quantel.jpeg": "/static/media/Quantel.4df7467b23b6b55b05ed.jpeg",
+    "static/media/profile_pic.jpg": "/static/media/profile_pic.d8fafc562ab688e73bc3.jpg",
+    "static/media/scouting_app.png": "/static/media/scouting_app.f048f35c34332481d753.png",
+    "static/media/DevPost.png": "/static/media/DevPost.c1656f50ddf433c5e5e4.png",
+    "static/media/FitFinder.png": "/static/media/FitFinder.072e30d60269f0854c8a.png",
+    "static/media/TerminalSuite.png": "/static/media/TerminalSuite.1225e010a49aaf41ffc4.png",
+    "static/media/goEzz.png": "/static/media/goEzz.ced18fd908efd7edf844.png",
+    "index.html": "/index.html",
+    "main.b2704fcf.css.map": "/static/css/main.b2704fcf.css.map",
+    "main.54d2d56f.js.map": "/static/js/main.54d2d56f.js.map",
+    "488.9561f9b8.chunk.js.map": "/static/js/488.9561f9b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2704fcf.css",
+    "static/js/main.54d2d56f.js"
+  ]
+}
