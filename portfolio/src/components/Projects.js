@@ -9,6 +9,7 @@ import ScoutingAppImage from '../assets/images/scouting_app.png';
 import FitFinderImage from '../assets/images/FitFinder.png';
 import DevPostImage from '../assets/images/DevPost.png';
 import TerminalSuiteImage from '../assets/images/TerminalSuite.png';
+import WebsiteImage from '../assets/images/website.jpg';
 
 const ProjectCard = ({ project, index }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,9 +37,9 @@ const ProjectCard = ({ project, index }) => {
             <h2 className="text-4xl font-semibold text-white">{project.title}</h2>
             <p className="mt-6 text-gray-300">{project.shortDescription}</p>
             <p className="mt-8 text-sm text-gray-400">
-              Technologies Used: {project.skills.join(', ')}
+              Technologies/Skills: {project.skills.join(', ')}
             </p>
-            
+
             {project.githubLink && (
               <div className="flex items-center justify-start mt-6">
                 <a
@@ -194,7 +195,7 @@ const Projects = () => {
                     Designed and developed a calculus engine able to perform differentiation and integration symbolically, and generate, solve, and provide explanations for hundreds of thousands of calculus problems.
                     Implemented a cross-domain authentication system that leveraged web-based authentication tokens to grant secure access to problem set PDFs hosted on a remote third-party domain (AWS S3)
                     Developed serverless backend in AWS Lambda to process API requests from the frontend and utilized AWS DynamoDB for secure storage and management of authentication tokens`,
-      skills: ['Python', 'AWS (Lambda, S3, DynamoDB)', 'LaTeX + PyLaTeX library', 'PostgreSQL'],
+      skills: ['Python', 'AWS (Lambda, S3, DynamoDB)', 'LaTeX + PyLaTeX library', 'PostgreSQL', 'Cloud Architecture'],
       image: CalcMaestroImage,
     },
     {
@@ -203,8 +204,9 @@ const Projects = () => {
       description: `Created a gesture-controlled endless running game modeled after Google's "No Internet Dino Game"
                     In the game, the player uses hand gestures (either a thumbs up or thumbs down) to control the on-screen dino, making it jump or duck respectively
                     This is done by passing an OpenCV camera stream to the MediaPipe computer-vision model for gesture-classification
-                    These classifications are then converted into movement for the dino`,
-      skills: ['Python', 'PyGame', 'MediaPipe Suite', 'OpenCV'],
+                    These classifications are then converted into movement for the dino
+                    Also Integrated adaptive difficulty scaling based on obstacle frequency and player performance`,
+      skills: ['Python', 'PyGame', 'MediaPipe Suite', 'OpenCV', 'Git', 'Computer Vision', 'Game Development'],
       image: GameImage,
       githubLink: 'https://github.com/akshaisrin/GestureControlledDinoGame',
     },
@@ -215,7 +217,7 @@ const Projects = () => {
                     Students can access new worksheets by simply reloading the worksheet's page, instantly generating a new worksheet with new numbers and problems
                     Created backend using AWS Lambda and implemented automatic user-metrics system storing analytics in a remote AWS DynamoDB database
                     Also created Python software that automatically generated seven K-9 math workbook PDFs for students (formatted using LaTeX). Check them out on Amazon.com!`,
-      skills: ['Python', 'AWS (Lambda, DynamoDB)'],
+      skills: ['Python', 'AWS (Lambda, DynamoDB)', 'Cloud Architecture'],
       image: MathMaestroImage,
       MathMaestroLink: 'https://mathmaestro.org',
     },
@@ -226,7 +228,7 @@ const Projects = () => {
                       App pulled the list of teams competing at each competition from an API and allowed data-collectors (scouts) to record match-specific data for each of 6 robots per match
                       Match data was automatically exported to a QR Code, where it could be scanned by a host computer and easily aggregated to select teams for alliances and create match strategies
                       Digitized the scouting process for the first time in team's 20 year history, helping team to qualify for PNW District Championship competition`,
-        skills: ['C# (.NET Maui Framework)', 'Tableau Desktop', 'FirstInspires API'],
+        skills: ['C# (.NET Maui Framework)', 'Tableau Desktop', 'FirstInspires API', 'Git', 'Full-Stack Desktop App Development'],
         image: ScoutingAppImage,
         githubLink: 'https://github.com/packofparts/Pack-of-Scouts',
       },
@@ -237,7 +239,7 @@ const Projects = () => {
                       Built UI with Flutter and Dart and designed PostgreSQL database + Python/Flask backend to pull and insert relevant information
                       Integrated app with AWS Bedrock to provide AI-generated style classifications based on user-preferences and AWS S3 to store dataset for style classification algorithm
                       Beta release coming to the Play Store soon!`,
-        skills: ['Flutter', 'Dart', 'Python', 'Flask', 'PostgreSQL', 'AWS (S3, Bedrock)'],
+        skills: ['Flutter', 'Dart', 'Python', 'Flask', 'PostgreSQL', 'AWS (S3, Bedrock)', 'Git', 'Mobile App Development'],
         image: FitFinderImage,
         DevPostLink: 'https://devpost.com/software/fitfinder-162dse',
       },
@@ -248,9 +250,18 @@ const Projects = () => {
                       Discord (social-messaging app): designed PostgreSQL database and implemented Python/Flask backend to pull and insert relevant user information
                       Geometry Dash (side-scrolling platformer game): helped design graphics engine to render images/videos in the terminal and designed level editor where users could design and play-through their own levels, entirely in app
                       Also utilized graphics enginge to render a version of Bad Apple (in true CS Nerd fashion)`,
-        skills: ['Python', 'Flask', 'Blessed Library', 'PostgreSQL'],
+        skills: ['Python', 'Flask', 'Blessed Library', 'PostgreSQL', 'Git', 'Full Stack Software Development'],
         image: TerminalSuiteImage,
         githubLink: 'https://github.com/crystaltine/vis',
+      },
+      {
+        title: 'Portfolio Website',
+        shortDescription: `My personal portfolio website built entirely from scratch`,
+        description: `Created this very portfolio website to showcase projects and experience
+                      Utilized React.js, Tailwind.css, and Node.js to create a more appealing UI`,
+        skills: ['React.js', 'Node.js', 'Tailwind.css', 'Git', 'Web Development'],
+        image: WebsiteImage,
+        githubLink: 'https://github.com/akshaisrin/Portfolio',
       },
   ];
 
