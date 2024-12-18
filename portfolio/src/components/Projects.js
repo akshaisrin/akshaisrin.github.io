@@ -93,7 +93,6 @@ const ProjectCard = ({ project, index }) => {
         </div>
       </motion.div>
 
-      {/* Detailed Modal */}
       {isOpen && (
         <div
           className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex justify-center items-center z-50"
@@ -127,7 +126,6 @@ const ProjectCard = ({ project, index }) => {
                   Technologies Used: {project.skills.join(', ')}
                 </p>
 
-                {/* Conditionally Render GitHub Link in Modal */}
                 {project.githubLink && (
                   <div className="mt-6">
                     <a

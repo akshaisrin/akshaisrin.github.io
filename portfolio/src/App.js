@@ -13,7 +13,7 @@ const App = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-950 to-slate-800">
       <Router>
         <Header />
-        <div className="pt-20"> {/* Add padding-top to ensure content is below header */}
+        <div className="pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

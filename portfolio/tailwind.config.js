@@ -18,9 +18,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Poppins', 'Arial', 'sans-serif'],  // Friendly sans-serif
-        serif: ['Playfair Display', 'Georgia', 'serif'],  // Elegant serif font
-        bold: ['Montserrat', 'Arial', 'sans-serif'], // Bold and clean sans-serif
+        sans: ['Poppins', 'Arial', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        bold: ['Montserrat', 'Arial', 'sans-serif'],
       },
       colors: {
         'electric-blue': '#00FFFF',
