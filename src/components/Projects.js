@@ -202,8 +202,7 @@ const Projects = () => {
       description: `Created a gesture-controlled endless running game modeled after Google's "No Internet Dino Game"
                     In the game, the player uses hand gestures (either a thumbs up or thumbs down) to control the on-screen dino, making it jump or duck respectively
                     This is done by passing an OpenCV camera stream to the MediaPipe computer-vision model for gesture-classification
-                    These classifications are then converted into movement for the dino
-                    Also Integrated adaptive difficulty scaling based on obstacle frequency and player performance`,
+                    These classifications are then converted into movement for the dino`,
       skills: ['Python', 'PyGame', 'MediaPipe Suite', 'OpenCV', 'Git', 'Computer Vision', 'Game Development'],
       image: GameImage,
       githubLink: 'https://github.com/akshaisrin/GestureControlledDinoGame',
