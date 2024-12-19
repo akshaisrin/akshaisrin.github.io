@@ -255,7 +255,7 @@ const Projects = () => {
       {
         title: 'Portfolio Website',
         shortDescription: `My personal portfolio website built entirely from scratch`,
-        description: `Created this very portfolio website to showcase projects and experience
+        description: `Created this portfolio website to showcase projects and experience
                       Utilized React.js, Tailwind.css, and Node.js to create a more appealing UI`,
         skills: ['React.js', 'Node.js', 'Tailwind.css', 'Git', 'Web Development'],
         image: WebsiteImage,
