@@ -8,7 +8,7 @@ const Resume = () => {
         <p className="text-xl mb-4">Click below to download my resume:</p>
         
         <a
-          href="/assets/files/Akshai Srinivasan- Resume.pdf" // Adjust with your actual file path
+          href="/assets/files/AkshaiSrinivasan-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-2xl text-[#9b59b6] hover:text-[#5f2eea] transition"
