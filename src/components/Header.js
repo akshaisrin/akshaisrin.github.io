@@ -29,6 +29,10 @@ const Header = () => {
           <Link to="/experience" className={getNavLinkClass("/experience")}>
             Experience
           </Link>
+
+          <Link to="/skills" className={getNavLinkClass("/skills")}>
+            Skills
+          </Link>
           
           <a
             href={require('../assets/files/AkshaiSrinivasan-Resume.pdf')}

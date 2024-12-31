@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import profileImage from '../assets/images/profile_pic.jpg';
 
 const Home = () => {
@@ -27,37 +26,16 @@ const Home = () => {
           transition={{ duration: 1.5 }}
         >
           <p className="text-2xl font-medium opacity-80 text-justify text-slate-300 font-arial">
-            I'm a computer engineering student at the University of Washington passionate about software engineering
-            and the application of computing and mathematics to solve complex problems. Welcome to my portfolio! <br /> <br />
+            I'm a computer engineering student at the University of Washington passionate about software
+            engineering and the application of computing and mathematics to solve complex problems. I
+            have experience with AWS cloud computing, full-stack app/web development, NLP,
+            and database management. Welcome to my portfolio! <br /> <br />
             I'm currently building "FitFinder", my social media app designed to make fashion more accessible.
             Check it out on my projects page!
           </p>
-
-          <div className="flex space-x-10 mt-14">
-            <a
-              href="https://github.com/akshaisrin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl text-slate-300 hover:text-white transition"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="mailto:akshai.n.srinivasan@gmail.com"
-              className="text-3xl text-slate-300 hover:text-white transition"
-            >
-              <FaEnvelope />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/akshai-n-srinivasan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-3xl text-slate-300 hover:text-white transition"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
         </motion.div>
+
+        
       </div>
 
       <motion.div
