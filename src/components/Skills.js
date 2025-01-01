@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Skills data with skill names and images imported dynamically
 const skillsData = [
   {
     category: "Languages/Tools",

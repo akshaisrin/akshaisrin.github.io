@@ -35,7 +35,7 @@ const Header = () => {
           </Link>
           
           <a
-            href={require('../assets/files/AkshaiSrinivasan-Resume.pdf')}
+            href={require('../assets/files/Akshai Srinivasan- Resume.pdf')}
             target="_blank"
             rel="noopener noreferrer"
             className={getNavLinkClass("/resume")}
