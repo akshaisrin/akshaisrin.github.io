@@ -6,7 +6,6 @@ import GameImage from '../assets/images/game.png';
 import MathMaestroImage from '../assets/images/mathmaestro.png';
 import MathMaestroImage2 from '../assets/images/mathmaestro2.png';
 import ScoutingAppImage from '../assets/images/scouting_app.png';
-import FitFinderImage from '../assets/images/FitFinder.png';
 import DevPostImage from '../assets/images/DevPost.png';
 import TerminalSuiteImage from '../assets/images/TerminalSuite.png';
 import WebsiteImage from '../assets/images/website.jpg';
@@ -229,17 +228,7 @@ const Projects = () => {
         image: ScoutingAppImage,
         githubLink: 'https://github.com/packofparts/Pack-of-Scouts',
       },
-      {
-        title: 'FitFinder',
-        shortDescription: `Mobile social media app designed to make fashion more accessible and provide engaging fashion content.`,
-        description: `Created mobile fashion social-media app for Android devices that classifies users' styles using a Tinder-like algorithm, connects people with similar fashion tastes, and provides engaging fashion content
-                      Built UI with Flutter and Dart and designed PostgreSQL database + Python/Flask backend to pull and insert relevant information
-                      Integrated app with AWS Bedrock to provide AI-generated style classifications based on user-preferences and AWS S3 to store dataset for style classification algorithm
-                      Beta release coming to the Play Store soon!`,
-        skills: ['Flutter', 'Dart', 'Python', 'Flask', 'PostgreSQL', 'AWS (S3, Bedrock)', 'Git', 'Mobile App Development'],
-        image: FitFinderImage,
-        DevPostLink: 'https://devpost.com/software/fitfinder-162dse',
-      },
+      
       {
         title: 'Terminal Suite',
         shortDescription: `A collection of popular apps recreated entirely from scratch in the terminal.`,
