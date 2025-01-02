@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.655acc18.css",
-    "main.js": "/static/js/main.68bfa292.js",
+    "main.css": "/static/css/main.d03e8d90.css",
+    "main.js": "/static/js/main.1bdd1381.js",
     "static/js/488.9561f9b8.chunk.js": "/static/js/488.9561f9b8.chunk.js",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
     "static/media/game.png": "/static/media/game.49ed238b414c2e35abd7.png",
@@ -18,7 +18,6 @@
     "static/media/scouting_app.png": "/static/media/scouting_app.f048f35c34332481d753.png",
     "static/media/dart.png": "/static/media/dart.2b8404dc9215f1cea757.png",
     "static/media/DevPost.png": "/static/media/DevPost.c1656f50ddf433c5e5e4.png",
-    "static/media/FitFinder.png": "/static/media/FitFinder.072e30d60269f0854c8a.png",
     "static/media/TerminalSuite.png": "/static/media/TerminalSuite.1225e010a49aaf41ffc4.png",
     "static/media/postgres.png": "/static/media/postgres.a7fa39912c91e079e90b.png",
     "static/media/python.png": "/static/media/python.6a5cbc319ab3ddf8ef92.png",
@@ -36,12 +35,12 @@
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/goEzz.png": "/static/media/goEzz.ced18fd908efd7edf844.png",
     "index.html": "/index.html",
-    "main.655acc18.css.map": "/static/css/main.655acc18.css.map",
-    "main.68bfa292.js.map": "/static/js/main.68bfa292.js.map",
+    "main.d03e8d90.css.map": "/static/css/main.d03e8d90.css.map",
+    "main.1bdd1381.js.map": "/static/js/main.1bdd1381.js.map",
     "488.9561f9b8.chunk.js.map": "/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.655acc18.css",
-    "static/js/main.68bfa292.js"
+    "static/css/main.d03e8d90.css",
+    "static/js/main.1bdd1381.js"
   ]
 }
