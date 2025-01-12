@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d03e8d90.css",
-    "main.js": "/static/js/main.b3a02286.js",
+    "main.js": "/static/js/main.989b1f85.js",
     "static/js/488.9561f9b8.chunk.js": "/static/js/488.9561f9b8.chunk.js",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
     "static/media/game.png": "/static/media/game.49ed238b414c2e35abd7.png",
@@ -11,7 +11,7 @@
     "static/media/heroku.png": "/static/media/heroku.e6097e19e6f076be3f49.png",
     "static/media/twilio.png": "/static/media/twilio.5e37c40664630cf31c32.png",
     "static/media/FIU.jpg": "/static/media/FIU.a29f8b2a377e3d5b073e.jpg",
-    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.c6bbf260255539637b38.pdf",
+    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.df144241bc4c7986a51c.pdf",
     "static/media/matlab.png": "/static/media/matlab.560187d1130720ba0fcd.png",
     "static/media/Quantel.jpeg": "/static/media/Quantel.4df7467b23b6b55b05ed.jpeg",
     "static/media/profile_pic.jpg": "/static/media/profile_pic.d8fafc562ab688e73bc3.jpg",
@@ -36,11 +36,11 @@
     "static/media/goEzz.png": "/static/media/goEzz.ced18fd908efd7edf844.png",
     "index.html": "/index.html",
     "main.d03e8d90.css.map": "/static/css/main.d03e8d90.css.map",
-    "main.b3a02286.js.map": "/static/js/main.b3a02286.js.map",
+    "main.989b1f85.js.map": "/static/js/main.989b1f85.js.map",
     "488.9561f9b8.chunk.js.map": "/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d03e8d90.css",
-    "static/js/main.b3a02286.js"
+    "static/js/main.989b1f85.js"
   ]
 }
