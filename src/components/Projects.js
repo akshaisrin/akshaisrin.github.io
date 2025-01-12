@@ -221,9 +221,9 @@ const Projects = () => {
         title: 'FRC Scouting Desktop App',
         shortDescription: `Offline data-collection desktop app for high school robotics team competitions (FRC).`,
         description: `Created a competition data-collection (or scouting) app for my robotics team (FRC 1294) of 70+ students using the .Net Maui framework in C#
-                      App pulled the list of teams competing at each competition from an API and allowed data-collectors (scouts) to record match-specific data for each of 6 robots per match
-                      Match data was automatically exported to a QR Code, where it could be scanned by a host computer and easily aggregated to select teams for alliances and create match strategies
-                      Digitized the scouting process for the first time in team's 20 year history, helping team to qualify for PNW District Championship competition`,
+                      Utilized FirstInspires API to dynamically retrieve competition roster and match schedules as JSON data, allowing scouts to record match-specific data via an intuitive UI
+                      Implemented offline QR code-based data export system using data serialization, allowing for a seamless transfer to a host computer for analysis and aggregation
+                      Digitized scouting process for first time in 20+ year team history, reducing aggregation time by over 80% and eliminating need for manual data collection`,
         skills: ['C# (.NET Maui Framework)', 'Tableau Desktop', 'FirstInspires API', 'Git', 'Full-Stack Desktop App Development'],
         image: ScoutingAppImage,
         githubLink: 'https://github.com/packofparts/Pack-of-Scouts',

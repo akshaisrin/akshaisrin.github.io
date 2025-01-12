@@ -114,9 +114,10 @@ const Experience = () => {
         position: 'Full-Stack Intern',
         year: 'Jun 2022 - Sep 2024',
         location: 'Bellevue, WA',
-        description: `Developed frontend and backend code for a mobile ridesharing application for Android devices in Android Studio
-                      Created UI using Flutter and Dart according to design specifications and integrated it with a Node.js-based backend
-                      Architected backend system using RESTful APIs to pull data from a remote MySQL database containing driver/schedule information and display it on-screen`,
+        description: `Implemented full-stack architecture for mobile Android ridesharing app including client-side UI and server-side logic
+                      Developed dynamic user interface using Flutter and Dart to enhance user experience and display real-time data
+                      Architected backend system using RESTful APIs to insert and retrieve driver/schedule information from a remote MySQL database and display it on-screen
+                      Hosted backend on remote Heroku serer and integrated app with the Twilio API to create a robust multifactor authentication system for enhanced security`,
         skills: ['Flutter', 'Dart', 'Node.js', 'MySQL', 'Heroku', 'Postman', 'Android Studio', 'Full-Stack Mobile App Development', 'Git'],
         image: goEzzImage,
       },
@@ -126,8 +127,9 @@ const Experience = () => {
         year: 'Jun 2021 - Sep 2021',
         location: 'New York, NY',
         description: `Developed Python software to analyze news feeds and explain price variability in S&P 500 stocks
-                      Utilized the Stanford CoreNLP library to perform sentiment analysis on relevant articles and ascertained the reason for significant price changes past a given threshold.
-                      Results were written to a PostgreSQL database`,
+                      Used Yahoo Finance API to retrieve price data and NewsAPI to fetch relevant news articles for each stock
+                      Utilized the Stanford CoreNLP library to perform sentiment analysis on relevant articles from API and ascertained the reason for significant price changes past a given threshold
+                      Designed a relational PostgreSQL database to store results of analysis`,
         skills: ['Python', 'NewsAPI', 'Yahoo Finance API', 'PostgreSQL', 'Stanford CoreNLP Library', 'Sentiment Analysis', 'Git'],
         image: QuantelImage,
       },
