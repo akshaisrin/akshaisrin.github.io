@@ -21,6 +21,7 @@ const skillsData = [
     category: "Frameworks/Libraries",
     skills: [
       { name: "Node.js", image: require("../assets/images/skills/nodejs.png") },
+      { name: "Next.js", image: require("../assets/images/skills/nextjs.png") },
       { name: "Flutter", image: require("../assets/images/skills/flutter.png") },
       { name: "Pandas", image: require("../assets/images/skills/pandas.png") },
       { name: "NumPy", image: require("../assets/images/skills/NumPy.png") },

@@ -4,6 +4,7 @@ import IBImage from '../assets/images/interactive-brokers.png';
 import FIUImage from '../assets/images/FIU.jpg';
 import goEzzImage from '../assets/images/goEzz.png';
 import QuantelImage from '../assets/images/Quantel.jpeg';
+import DubHacksImage from '../assets/images/DubHacks2.jpg';
 
 const ExperienceCard = ({ experience, index }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +15,17 @@ const ExperienceCard = ({ experience, index }) => {
   return (
     <>
       <motion.div
-        className={`w-full max-w-6xl mx-auto my-8 bg-gray-800 p-14 rounded-lg shadow-xl hover:scale-105 transition-all duration-300 min-h-[350px]
-            ${index % 2 === 0 ? 'ml-40' : '-ml-40'}`}
-        initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7 }}
-        onClick={handleClick}
-      >
+              className={`w-full max-w-6xl mx-auto my-8 bg-gray-800 p-14 rounded-lg shadow-xl hover:scale-105 transition-all duration-300 min-h-[350px]
+                  ${index % 2 === 0 ? 'ml-40' : '-ml-40'}`}
+              style={{
+                border: '2.5px solid #00bfff',
+                boxShadow: '0 0 15px 3px rgba(0, 191, 255, 0.4)',
+              }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              onClick={handleClick}
+         >
         <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
           <img
             src={experience.image}
@@ -42,11 +47,15 @@ const ExperienceCard = ({ experience, index }) => {
 
       {isOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex justify-center items-center z-50"
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-85 flex justify-center items-center z-50"
           onClick={handleClose}
         >
           <div
-            className="bg-gray-900 p-12 rounded-lg max-w-6xl w-full relative"
+            className="bg-gray-900 p-12 rounded-lg max-w-7xl w-full relative"
+            style={{
+              border: '2.5px solid #00bfff',
+              boxShadow: '0 0 15px 3px rgba(0, 191, 255, 0.2)',
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -57,8 +66,8 @@ const ExperienceCard = ({ experience, index }) => {
             </button>
 
             <h2 className="text-4xl font-semibold text-white">{experience.company}</h2>
-            <p className="mt-4 text-2xl text-gray-300">{experience.position}</p>
-            <p className="mt-4 text-xl text-gray-300">
+            <p className="mt-4 text-2xl text-gray-400">{experience.position}</p>
+            <p className="mt-4 text-xl text-gray-400">
               {experience.year}, <span className="ml-2">{experience.location}</span>
             </p>
             <div className="flex mt-6">
@@ -87,6 +96,18 @@ const ExperienceCard = ({ experience, index }) => {
 
 const Experience = () => {
   const experience = [
+    {
+      company: 'DubHacks',
+      position: 'Software Developer',
+      year: 'Jan 2025 - Present',
+      location: 'Seattle, WA',
+      description: `Developing software for the largest collegiate hackathon in the PNW (1500+ participants)
+                    Designed custom web-app for hackers to connect, make transactions, and view relevant information using TypeScript, React.js, Tailwind.css, and Next.js 
+                    Engineered Discord OAuth system to authenticate hackers via Discord login and verify registration against internal MongoDB database
+                    Building greedy judging algorithm to allocate judges to teams by optimizing availability and scoring heuristics `,
+      skills: ['React.js', 'Typescript', 'Next.js', 'Node.js', 'Tailwind.css', 'MongoDB'],
+      image: DubHacksImage,
+    },
     {
       company: 'Jaggernaut Wealth Services LLC',
       position: 'Software Development Intern',
