@@ -46,25 +46,17 @@ const skillsData = [
 const Skills = () => {
   return (
     <div className="text-white min-h-screen flex flex-col items-center py-10">
-     
-      <motion.h1
-        className="text-5xl font-semibold mt-4 mb-16 text-[#c665db]"
-       
-      >
+      <motion.h1 className="text-5xl font-semibold mt-4 mb-16 text-[#c665db]">
         Skills
       </motion.h1>
 
-      <motion.p
-        className="text-lg text-gray-300 mb-16 max-w-2xl text-center"
-        
-      >
+      <motion.p className="text-lg text-gray-300 mb-16 max-w-2xl text-center">
         Some of the languages, frameworks, and technologies I have experience with!
       </motion.p>
 
       <div className="w-full max-w-6xl space-y-10">
         {skillsData.map((category, index) => (
           <div key={index} className="space-y-4">
-            
             <motion.h2
               className="text-3xl font-semibold text-[#c665db] text-center mb-6"
               initial={{ opacity: 0, y: -20 }}
@@ -74,40 +66,49 @@ const Skills = () => {
               {category.category}
             </motion.h2>
 
-            <div className="flex flex-wrap justify-center gap-8">
-              {category.skills.map((skill, idx) => {
-                return (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 1.5 }}
-                    whileHover={{ scale: 1.3 }}
-                    className="flex flex-col items-center justify-center"
-                  >
-                    
-                    <motion.div
-                      className="w-20 h-20 rounded-full overflow-hidden bg-gray-700 mt-4 shadow-lg flex justify-center items-center"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 1.5 }}
-                    >
-                      <img src={skill.image} alt={skill.name} className="object-contain w-12 h-12" />
-                    </motion.div>
+            <div
+  className="rounded-2xl p-4"
+  style={{
+    border: "2px solid #00bfff",
+    boxShadow: "0 0 20px rgba(0, 191, 255, 0.6)",
+  }}
+>
+  <div className="flex flex-wrap justify-center gap-6">
+    {category.skills.map((skill, idx) => (
+      <motion.div
+        key={idx}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5 }}
+        whileHover={{ scale: 1.2 }}
+        className="flex flex-col items-center justify-center"
+      >
+        <motion.div
+          className="w-16 h-16 rounded-full overflow-hidden bg-gray-700 mt-2 shadow-lg flex justify-center items-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <img
+            src={skill.image}
+            alt={skill.name}
+            className="object-contain w-10 h-10"
+          />
+        </motion.div>
 
-                    
-                    <motion.p
-                      className="mt-2 mb-6 text-white text-sm text-center"
-                      initial={{ opacity: 0, y: -20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 1.5 }}
-                    >
-                      {skill.name}
-                    </motion.p>
-                  </motion.div>
-                );
-              })}
-            </div>
+        <motion.p
+          className="mt-1 mb-2 text-white text-xs text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          {skill.name}
+        </motion.p>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
           </div>
         ))}
       </div>
