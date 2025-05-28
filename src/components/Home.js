@@ -10,10 +10,11 @@ import java from '../assets/images/skills/java.png';
 import postgres from '../assets/images/skills/postgres.png';
 
 const phrases = [
-  "Computer Engineering + AMATH @ UW",
+  "Computer Engineering + Applied Math @ UW",
   "Incoming SWE Intern @ Neptune Medical",
   "Currently Building Aura",
   "Software Developer @ DubHacks",
+  "Foodie Extraordinaire",
 ];
 
 const Home = () => {
@@ -146,17 +147,16 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Electric Blue Divider */}
-      <div className="w-full flex justify-center mt-2 mb-16">
+      <div className="w-full flex justify-center mt-4 mb-20">
         <div
-          className="w-[80%] h-[4px] rounded-full"
+          className="w-[80%] h-[3px] rounded-full"
           style={{ backgroundColor: '#00bfff', boxShadow: '0 0 10px #00bfff' }}
         ></div>
       </div>
 
       <div id="about" className="mt-24 mb-20 px-20">
         <div className="flex items-start space-x-16">
-          {/* Left Half - Image */}
+        
           <div className="w-1/2 flex justify-start ml-20">
             <div
               className="relative p-3 rounded-3xl"
@@ -173,19 +173,19 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Half - Text */}
+          
           <div className="w-1/2 flex flex-col justify-start">
             <h2 className="text-6xl font-bold bg-gradient-to-r from-[#5f2eea] to-[#9b59b6] bg-clip-text text-transparent mb-8">
               About Me
             </h2>
-            <p className="text-xl leading-relaxed text-slate-200 max-w-2xl">
+            <p className="text-[1.15rem] leading-relaxed text-slate-200 max-w-2xl">
               Hey! I'm Akshai Srinivasan. I'm an undergrad at the University of Washington double majoring in computer engineering
               and applied math! I'm passionate about mathematics, full-stack app development, AWS Cloud Computing, and NLP, and I'm currently
               exploring machine learning and some basic electrical engineering. <br /><br />
 
               At the UW, I'm a developer for DubHacks, the largest collegiate hackathon in the PNW. I also serve as the
               President of the Technology Consulting Association, the UW's premier technology consultancy. In my free time,
-              I enjoy working out, binging sitcoms and sci-fi movies, and exploring the numerous cafes and boba shops
+              I enjoy working out, binging sitcoms and sci-fi movies, and exploring the numerous restaurants, cafes and boba shops
               we have here in Seattle! <br /> <br />
 
               Feel free to explore my experiences and projects using

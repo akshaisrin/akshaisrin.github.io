@@ -54,7 +54,7 @@ const Skills = () => {
         Some of the languages, frameworks, and technologies I have experience with!
       </motion.p>
 
-      <div className="w-full max-w-6xl space-y-10">
+      <div className="w-full max-w-5xl space-y-10">
         {skillsData.map((category, index) => (
           <div key={index} className="space-y-4">
             <motion.h2
@@ -67,53 +67,51 @@ const Skills = () => {
             </motion.h2>
 
             <div
-  className="rounded-2xl p-4"
-  style={{
-    border: "2px solid #00bfff",
-    boxShadow: "0 0 20px rgba(0, 191, 255, 0.6)",
-  }}
->
-  <div className="flex flex-wrap justify-center gap-6">
-    {category.skills.map((skill, idx) => (
-      <motion.div
-        key={idx}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5 }}
-        whileHover={{ scale: 1.2 }}
-        className="flex flex-col items-center justify-center"
-      >
-        <motion.div
-          className="w-16 h-16 rounded-full overflow-hidden bg-gray-700 mt-2 shadow-lg flex justify-center items-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <img
-            src={skill.image}
-            alt={skill.name}
-            className="object-contain w-10 h-10"
-          />
-        </motion.div>
+              className="rounded-2xl p-4"
+              style={{
+                border: "2px solid #00bfff",
+                boxShadow: "0 0 20px rgba(0, 191, 255, 0.6)",
+              }}
+            >
+        <div className="flex flex-wrap justify-center gap-6">
+          {category.skills.map((skill, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
+              whileHover={{ scale: 1.2 }}
+              className="flex flex-col items-center justify-center"
+            >
+            <motion.div
+              className="w-16 h-16 rounded-full overflow-hidden bg-gray-700 mt-2 shadow-lg flex justify-center items-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              <img
+                src={skill.image}
+                alt={skill.name}
+                className="object-contain w-10 h-10"
+              />
+            </motion.div>
+              <motion.p
+                className="mt-1 mb-2 text-white text-xs text-center"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5 }}
+              >
 
-        <motion.p
-          className="mt-1 mb-2 text-white text-xs text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          {skill.name}
-        </motion.p>
-      </motion.div>
-    ))}
+              {skill.name}
+              </motion.p>
+            </motion.div>
+            ))}
+          </div>
+        </div>
+        </div>
+      ))}
   </div>
 </div>
-
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+  );};
 
 export default Skills;
