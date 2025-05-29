@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3dd834d2.css",
-    "main.js": "/static/js/main.48a2baae.js",
+    "main.css": "/static/css/main.0ccb6fbf.css",
+    "main.js": "/static/js/main.9d882127.js",
     "static/js/488.1446b851.chunk.js": "/static/js/488.1446b851.chunk.js",
     "static/media/TCALogo.png": "/static/media/TCALogo.b989342544b674ebf7a3.png",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
@@ -33,8 +33,8 @@
     "static/media/nodejs.png": "/static/media/nodejs.e328955d6bbbf3ebc72b.png",
     "static/media/nextjs.png": "/static/media/nextjs.49309b4c7ade3b6b9c1a.png",
     "static/media/postman.png": "/static/media/postman.1507a432ee111ef45ca8.png",
-    "static/media/DubHacks2.jpg": "/static/media/DubHacks2.0a0d21ddc65d5491b939.jpg",
     "static/media/java.png": "/static/media/java.f5dd86c3ef6ef3f85acf.png",
+    "static/media/DubHacks2.jpg": "/static/media/DubHacks2.99b0968caf154e91179a.jpg",
     "static/media/html.png": "/static/media/html.6e930594286d8afe4c79.png",
     "static/media/css-3.png": "/static/media/css-3.463e319bad8e0edf1ef7.png",
     "static/media/NumPy.png": "/static/media/NumPy.ad6ce4268be9e06f8cb4.png",
@@ -42,12 +42,12 @@
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/goEzz.png": "/static/media/goEzz.ced18fd908efd7edf844.png",
     "index.html": "/index.html",
-    "main.3dd834d2.css.map": "/static/css/main.3dd834d2.css.map",
-    "main.48a2baae.js.map": "/static/js/main.48a2baae.js.map",
+    "main.0ccb6fbf.css.map": "/static/css/main.0ccb6fbf.css.map",
+    "main.9d882127.js.map": "/static/js/main.9d882127.js.map",
     "488.1446b851.chunk.js.map": "/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3dd834d2.css",
-    "static/js/main.48a2baae.js"
+    "static/css/main.0ccb6fbf.css",
+    "static/js/main.9d882127.js"
   ]
 }
