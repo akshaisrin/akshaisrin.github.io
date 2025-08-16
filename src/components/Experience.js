@@ -5,6 +5,7 @@ import FIUImage from '../assets/images/FIU.jpg';
 import goEzzImage from '../assets/images/goEzz.png';
 import QuantelImage from '../assets/images/Quantel.jpeg';
 import DubHacksImage from '../assets/images/DubHacks2.jpg';
+import NeptuneImage from '../assets/images/Neptune.jpeg';
 
 const ExperienceCard = ({ experience, index }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,14 +98,26 @@ const ExperienceCard = ({ experience, index }) => {
 const Experience = () => {
   const experience = [
     {
+      company: 'Neptune Medical',
+      position: 'Software Engineering Intern',
+      year: 'Jun 2025 - Present',
+      location: 'Burlingame, CA',
+      description: `Implementing fault injection framework in C++ for haptic input device in robotic endoscope, validating system reliability under failure conditions
+                    Developing ROS2 nodes in Python to enable real-time communication between controllers and endoscope hardware
+                    Provided technical support in navigation control system labs, debugging real-time system issues and optimizing performance during physician testing
+                    Managing sprint issues in JIRA and documenting system behavior in Confluence in Agile development environment`,
+      skills: ['C++', 'Python', 'ROS2', 'Robotics', 'Agile Development'],
+      image: NeptuneImage
+    },
+    {
       company: 'DubHacks',
       position: 'Software Developer',
       year: 'Jan 2025 - Present',
       location: 'Seattle, WA',
-      description: `Developing software for the largest collegiate hackathon in the PNW (1500+ participants)
-                    Designed custom web-app for hackers to connect, make transactions, and view relevant information using TypeScript, React.js, Tailwind.css, and Next.js 
-                    Engineered Discord OAuth system to authenticate hackers via Discord login and verify registration against internal MongoDB database
-                    Building greedy judging algorithm to allocate judges to teams by optimizing availability and scoring heuristics `,
+      description: `Developing full-stack software for the largest collegiate hackathon in the PNW, supporting 1600+ hackers and judges
+                    Implemented hacker portal web application using Typescript, React.js, Tailwind.css, and Next.js for team collaboration, event updates, and DubCoin currency transactions 
+                    Built OAuth2 infrastructure to authenticate hackers via Discord and verify registration against MongoDB database
+                    Designed greedy scheduling algorithm to allocate judges to teams by optimizing availability and scoring heuristics`,
       skills: ['React.js', 'Typescript', 'Next.js', 'Node.js', 'Tailwind.css', 'MongoDB'],
       image: DubHacksImage,
     },
@@ -135,11 +148,11 @@ const Experience = () => {
         position: 'Full-Stack Intern',
         year: 'Jun 2022 - Sep 2024',
         location: 'Bellevue, WA',
-        description: `Implemented full-stack architecture for mobile Android ridesharing app including client-side UI and server-side logic
-                      Developed dynamic user interface using Flutter and Dart to enhance user experience and display real-time data
-                      Architected backend system using RESTful APIs to insert and retrieve driver/schedule information from a remote MySQL database and display it on-screen
-                      Hosted backend on remote Heroku serer and integrated app with the Twilio API to create a robust multifactor authentication system for enhanced security`,
-        skills: ['Flutter', 'Dart', 'Node.js', 'MySQL', 'Heroku', 'Postman', 'Android Studio', 'Full-Stack Mobile App Development', 'Git'],
+        description: `Built and deployed full-stack architecture for mobile Android ridesharing application processing 28,000+ rides to date
+                      Developed RESTful API endpoints in JavaScript for CRUD operations on driver/scheduling data from remote MySQL database
+                      Designed responsive UI using Flutter and Dart, enabling real-time ride tracking and status synchronization
+                      Integrated Twilio API for SMS-based multifactor authentication, enhancing security and identity verification`,
+        skills: ['Flutter', 'Dart', 'Node.js', 'MySQL', 'Heroku', 'Postman', 'Android Studio', 'Full-Stack App Development', 'Git'],
         image: goEzzImage,
       },
       {

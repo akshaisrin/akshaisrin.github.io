@@ -11,7 +11,7 @@ import postgres from '../assets/images/skills/postgres.png';
 
 const phrases = [
   "Computer Engineering + Applied Math @ UW",
-  "Incoming SWE Intern @ Neptune Medical",
+  "SWE Intern @ Neptune Medical",
   "Currently Building Aura",
   "Software Developer @ DubHacks",
   "Foodie Extraordinaire",
@@ -31,7 +31,7 @@ const Home = () => {
     <div className="text-white scroll-smooth min-h-screen w-full overflow-x-hidden" id="home" style={{ backgroundColor: 'inherit' }}>
       <div className="min-h-[80vh] flex flex-col">
         <div className="flex-1 flex">
-          {/* Desktop Layout */}
+
           <div className="hidden lg:flex lg:w-1/2 lg:flex-col lg:items-start lg:justify-start lg:text-left lg:px-14 lg:ml-20 lg:mt-[-100px]">
             <div className="h-52"></div>
 
@@ -147,11 +147,9 @@ const Home = () => {
             </div>
           </motion.div>
 
-          {/* Mobile Layout */}
           <div className="flex flex-col items-center w-full px-6 mt-8 lg:hidden">
             <div className="h-16"></div>
 
-            {/* Title and blue line */}
             <motion.h1
               className="text-4xl md:text-5xl font-bold leading-tight tracking-wide bg-gradient-to-r from-[#5f2eea] to-[#9b59b6] bg-clip-text text-transparent opacity-80 text-center"
               initial={{ opacity: 0, y: -50 }}
@@ -175,7 +173,6 @@ const Home = () => {
               />
             </motion.div>
 
-            {/* Profile Picture */}
             <motion.div
               className="flex justify-center items-center mb-8"
               initial={{ opacity: 0, y: -50 }}
@@ -197,7 +194,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Changing phrases */}
+  
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -220,7 +217,7 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Skills (fit as many as possible in one row) */}
+          
             <motion.div
               className="mb-12"
               initial={{ opacity: 0, y: 30 }}
@@ -273,7 +270,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+
       <motion.div 
         className="flex flex-col items-center mt-8 lg:-mt-32 py-12 cursor-pointer"
         onClick={() => {
@@ -306,9 +303,8 @@ const Home = () => {
         </motion.svg>
       </motion.div>
 
-      {/* About section */}
       <div id="about" className="mt-24 mb-20 px-6 lg:px-20">
-        {/* Desktop About Layout */}
+       
         <div className="hidden lg:flex lg:items-start lg:space-x-16">
           <div className="w-1/2 flex justify-start ml-20">
             <div
@@ -332,7 +328,7 @@ const Home = () => {
             </h2>
             <p className="text-[1.15rem] leading-relaxed text-slate-200 max-w-2xl">
               Hey! I'm Akshai Srinivasan. I'm an undergrad at the University of Washington double majoring in computer engineering
-              and applied math! I'm passionate about mathematics, full-stack app development, AWS Cloud Computing, and NLP, and I'm currently
+              and applied math! I'm passionate about robotics, NLP, and full-stack development, and I'm currently
               exploring machine learning and some basic electrical engineering. <br /><br />
 
               At the UW, I'm a developer for DubHacks, the largest collegiate hackathon in the PNW. I also serve as the
@@ -346,14 +342,12 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Mobile About Layout */}
         <div className="flex flex-col items-center lg:hidden">
-          {/* About Me Title */}
+
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#5f2eea] to-[#9b59b6] bg-clip-text text-transparent mb-8 text-center">
             About Me
           </h2>
 
-          {/* About Picture */}
           <div className="flex justify-center mb-8">
             <div
               className="relative p-3 rounded-3xl"
@@ -370,7 +364,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* About Paragraph */}
           <p className="text-base md:text-lg leading-relaxed text-slate-200 text-center max-w-2xl">
             Hey! I'm Akshai Srinivasan. I'm an undergrad at the University of Washington double majoring in computer engineering
             and applied math! I'm passionate about mathematics, full-stack app development, AWS Cloud Computing, and NLP, and I'm currently

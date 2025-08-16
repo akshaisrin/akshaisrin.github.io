@@ -234,11 +234,12 @@ const Projects = () => {
     {
       title: 'CalcMaestro.com',
       shortDescription: 'Website for my calculus test-prep company providing students with calculus practice worksheets via subscription service',
-      description: `Created website for my calculus test-prep company providing students with subscription-based automatically generated calculus practice worksheets
+      description: `Developed website for my calculus test-prep company supporting scalable, subscription-based content delivery
                     Designed calculus engine able to perform differentiation and integration symbolically, and generate, solve, and provide explanations for hundreds of thousands of calculus problems
-                    Implemented cross-domain authentication system that leveraged web-based authentication tokens to grant secure access to problem set PDFs hosted on a remote third-party domain (AWS S3)
-                    Developed serverless backend in AWS Lambda to process API requests from the frontend and utilized AWS DynamoDB for secure storage and management of authentication tokens`,
-      skills: ['Python', 'AWS (Lambda, S3, DynamoDB)', 'LaTeX + PyLaTeX library', 'PostgreSQL', 'Cloud Architecture'],
+                    Built serverless backend using AWS Lambda and AWS API Gateway to manage frontend requests and serve PDFs
+                    Leveraged AWS DynamoDB for secure, low-latency storage of authentication tokens and analyics data
+                    Implemented cross-domain authentication system using web tokens to securely serve PDFs hosted on AWS S3`,
+      skills: ['Python', 'AWS (Lambda, S3, DynamoDB, API Gateway)', 'LaTeX + PyLaTeX library', 'PostgreSQL', 'Cloud Architecture'],
       image: CalcMaestroImage,
     },
     {
@@ -255,9 +256,10 @@ const Projects = () => {
     {
         title: 'FitFinder',
         shortDescription: `Mobile social media app designed to make fashion more accessible and provide engaging fashion content.`,
-        description: `Created mobile fashion social-media app for Android devices that classifies users' styles using a Tinder-like algorithm, connects people with similar fashion tastes, and provides engaging fashion content
-                      Built UI with Flutter and Dart and designed PostgreSQL database + Python/Flask backend to pull and insert relevant information
-                      Integrated app with AWS Bedrock to provide AI-generated style classifications based on user-preferences and AWS S3 to store dataset for style classification algorithm`,
+        description: `Created mobile fashion social media app for Android devices designed to connect people with similar fashion tastes and provide engaging fashion content
+                      Architected and optimized a relational PostgreSQL database storing user interactions, posts, and metrics with indexing and query optimization to support low-latency retrieval
+                      Implemented Python/Flask backend using RESTFUL APIs to support content delivery and session management
+                      Integrated AWS Bedrock to generate AI-powered style classifications and AWS S3 for storage of 40,000+ image algorithm dataset`,
         skills: ['Flutter', 'Dart', 'Python', 'Flask', 'PostgreSQL', 'AWS (S3, Bedrock)', 'Git', 'Mobile App Development'],
         image: FitFinderImage,
         DevPostLink: 'https://devpost.com/software/fitfinder-162dse',
