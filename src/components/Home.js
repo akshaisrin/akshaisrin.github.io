@@ -11,8 +11,7 @@ import postgres from '../assets/images/skills/postgres.png';
 
 const phrases = [
   "Computer Engineering + Applied Math @ UW",
-  "SWE Intern @ Neptune Medical",
-  "Currently Building Aura",
+  "President @ Technology Consulting Association",
   "Software Developer @ DubHacks",
   "Foodie Extraordinaire",
 ];
@@ -91,10 +90,10 @@ const Home = () => {
                   {[
                     { icon: python, name: "Python" },
                     { icon: java, name: "Java" },
-                    { icon: reactLogo, name: "React" },
-                    { icon: typescript, name: "TypeScript" },
                     { icon: aws, name: "AWS" },
-                    { icon: postgres, name: "Postgres" }
+                    { icon: postgres, name: "Postgres" },
+                    { icon: typescript, name: "TypeScript" },
+                    { icon: reactLogo, name: "React" },
                    
                   ].map((skill, idx) => (
                     <motion.div
@@ -328,8 +327,7 @@ const Home = () => {
             </h2>
             <p className="text-[1.15rem] leading-relaxed text-slate-200 max-w-2xl">
               Hey! I'm Akshai Srinivasan. I'm an undergrad at the University of Washington double majoring in computer engineering
-              and applied math! I'm passionate about robotics, NLP, and full-stack development, and I'm currently
-              exploring machine learning and some basic electrical engineering. <br /><br />
+              and applied math! I'm passionate about full-stack development, robotics, mathematics, and leveraging AI to solve complex problems at scale. <br /><br />
 
               At the UW, I'm a developer for DubHacks, the largest collegiate hackathon in the PNW. I also serve as the
               President of the Technology Consulting Association, the UW's premier technology consultancy. In my free time,

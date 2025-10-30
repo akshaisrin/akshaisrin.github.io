@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import CalcMaestroImage from '../assets/images/CalcMaestro.png';
 import GameImage from '../assets/images/game.png';
 import MathMaestroImage from '../assets/images/mathmaestro.png';
@@ -16,214 +16,284 @@ import TCALogo from '../assets/images/TCALogo.png';
 
 const ProjectCard = ({ project, index }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [visibleSkillsCount, setVisibleSkillsCount] = useState(4);
+  const skillsContainerRef = useRef(null);
+  const measurementContainerRef = useRef(null);
 
   const handleClick = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
 
+  useEffect(() => {
+    const calculateVisibleSkills = () => {
+      if (!skillsContainerRef.current || !measurementContainerRef.current) return;
+
+      const container = skillsContainerRef.current;
+      const containerWidth = container.offsetWidth;
+      const measurementContainer = measurementContainerRef.current;
+      const gap = 6; // gap-1.5 = 0.375rem = 6px
+      
+      let totalWidth = 0;
+      let count = 0;
+      const maxSkills = Math.min(4, project.skills.length);
+      const skillElements = measurementContainer.children;
+
+      if (skillElements.length < maxSkills) {
+        setTimeout(calculateVisibleSkills, 50);
+        return;
+      }
+
+      for (let i = 0; i < maxSkills; i++) {
+        const skillElement = skillElements[i];
+        if (skillElement) {
+          const skillWidth = skillElement.offsetWidth;
+          const widthWithGap = totalWidth + skillWidth + (count > 0 ? gap : 0);
+          
+          if (widthWithGap <= containerWidth) {
+            totalWidth = widthWithGap;
+            count++;
+          } else {
+            break;
+          }
+        }
+      }
+
+      setVisibleSkillsCount(count);
+    };
+
+    // Calculate after a short delay to ensure DOM is rendered
+    const timeoutId = setTimeout(calculateVisibleSkills, 100);
+    window.addEventListener('resize', calculateVisibleSkills);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', calculateVisibleSkills);
+    };
+  }, [project.skills]);
+
   return (
     <>
       <motion.div
-        className={`w-full max-w-6xl mx-auto my-8 bg-gray-800 p-14 rounded-lg shadow-xl hover:scale-105 transition-all duration-300 min-h-[350px]
-            ${index % 2 === 0 ? 'ml-40' : '-ml-40'}`}
+        className="bg-gray-800 rounded-lg shadow-xl overflow-hidden cursor-pointer h-full flex flex-col"
         style={{
           border: '2.5px solid #00bfff',
-          boxShadow: '0 0 15px 3px rgba(0, 191, 255, 0.4)',
+          boxShadow: isHovered ? '0 0 20px 5px rgba(0, 191, 255, 0.6)' : '0 0 15px 3px rgba(0, 191, 255, 0.4)',
         }}
-        initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7 }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
         onClick={handleClick}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        whileHover={{ scale: 1.03 }}
       >
-        <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+        <div className="relative w-full h-48 overflow-hidden bg-gray-700">
           <img
             src={project.image}
             alt={project.title}
-            className="w-1/2 h-auto rounded-lg mr-10 ml-5"
+            className="w-full h-full object-cover object-top transition-transform duration-300"
+            style={{ transform: isHovered ? 'scale(1.1)' : 'scale(1)' }}
           />
-          <div className="text-left w-1/2">
-            <h2 className="text-4xl font-semibold text-white">{project.title}</h2>
-            <p className="mt-6 text-gray-300">{project.shortDescription}</p>
-            <p className="mt-8 text-sm text-gray-400">
-              Technologies/Skills: {project.skills.join(', ')}
-            </p>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+        </div>
+        
+        <div className="p-6 flex flex-col flex-grow">
+          <h2 className="text-xl font-semibold text-white mb-3">{project.title}</h2>
+          <p className="text-gray-300 text-sm mb-4 flex-grow line-clamp-2 leading-relaxed">{project.shortDescription}</p>
+          
+          <div className="relative">
+            {/* Invisible measurement container */}
+            <div 
+              ref={measurementContainerRef}
+              className="absolute invisible flex gap-1.5"
+              style={{ whiteSpace: 'nowrap' }}
+            >
+              {project.skills.slice(0, 4).map((skill, idx) => (
+                <span
+                  key={`measure-${idx}`}
+                  className="px-2 py-1 text-xs bg-gray-700 text-gray-300 rounded whitespace-nowrap"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+            
+            {/* Visible skills container */}
+            <div ref={skillsContainerRef} className="flex gap-1.5 mb-4">
+              {project.skills.slice(0, visibleSkillsCount).map((skill, idx) => (
+                <span
+                  key={idx}
+                  className="px-2 py-1 text-xs bg-gray-700 text-gray-300 rounded whitespace-nowrap flex-shrink-0"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
 
+          <div className="flex items-center gap-3 mt-auto pt-3 border-t border-gray-700">
             {project.githubLink && (
-              <div className="flex items-center justify-start mt-6">
                 <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-gray-300 hover:text-gray-400"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
                 >
-                  <FaGithub className="text-xl" />
-                  <span className="ml-1 text-sm font-normal">Link to GitHub</span>
+                <FaGithub className="text-sm mr-1.5" />
+                <span className="text-xs">GitHub</span>
                 </a>
-              </div>
             )}
-
             {project.MathMaestroLink && (
-              <div className="flex items-center justify-start mt-6">
                 <a
                   href={project.MathMaestroLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-gray-400"
-                >
-                  <img
-                    src={MathMaestroImage2}
-                    alt="MathMaestro Logo"
-                    className="w-8 h-8 mr-3 inline-block"
-                  />
-                  <span className="text-sm font-normal">Link to Website</span>
-                </a>
-              </div>
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
+              >
+                <FaExternalLinkAlt className="text-xs mr-1.5" />
+                <span className="text-xs">Website</span>
+              </a>
             )}
             {project.ConsultingLink && (
-              <div className="flex items-center justify-start mt-6">
                 <a
                   href={project.ConsultingLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-gray-400"
-                >
-                  <img
-                    src={TCALogo}
-                    alt="TCA Logo"
-                    className="w-11 h-8 mr-3 inline-block"
-                  />
-                  <span className="text-sm font-normal">Link to Website</span>
-                </a>
-              </div>
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
+              >
+                <FaExternalLinkAlt className="text-xs mr-1.5" />
+                <span className="text-xs">Website</span>
+              </a>
             )}
-
             {project.DevPostLink && (
-              <div className="flex items-center justify-start mt-6">
                 <a
                   href={project.DevPostLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-gray-400"
-                >
-                  <img
-                    src={DevPostImage}
-                    alt="DevPost Logo"
-                    className="w-8 h-8 mr-3 inline-block"
-                  />
-                  <span className="text-sm font-normal">Link to DevPost</span>
-                </a>
-              </div>
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
+              >
+                <FaExternalLinkAlt className="text-xs mr-1.5" />
+                <span className="text-xs">DevPost</span>
+              </a>
             )}
+            <span className="text-xs text-gray-500 ml-auto">Details →</span>
           </div>
         </div>
       </motion.div>
 
       {isOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-85 flex justify-center items-center z-50"
+        <motion.div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center z-50 p-4 overflow-y-auto"
           onClick={handleClose}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
-          <div
-            className="bg-gray-900 p-12 rounded-lg max-w-7xl w-full relative"
+          <motion.div
+            className="bg-gray-900 p-6 sm:p-8 md:p-12 rounded-lg max-w-7xl w-full relative my-8"
             style={{
               border: '2.5px solid #00bfff',
-              boxShadow: '0 0 15px 3px rgba(0, 191, 255, 0.2)',
+              boxShadow: '0 0 20px 5px rgba(0, 191, 255, 0.3)',
             }}
             onClick={(e) => e.stopPropagation()}
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
           >
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 text-white text-2xl"
+              className="absolute top-4 right-4 text-white text-3xl hover:text-[#00bfff] transition-colors z-10"
             >
               &times;
             </button>
 
-            <h2 className="text-4xl font-semibold text-white">{project.title}</h2>
-            <div className="flex mt-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6 pr-10">{project.title}</h2>
+            <div className="flex flex-col lg:flex-row gap-6 mt-6">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-1/2 h-auto rounded-lg mr-8"
+                className="w-full lg:w-1/2 h-auto rounded-lg object-cover"
               />
-              <div className="text-left w-1/2">
-                <ul className="mt-4 mb-4 text-white">
+              <div className="text-left w-full lg:w-1/2">
+                <ul className="mt-4 mb-4 text-white space-y-2">
                   {project.description.split('\n').map((line, index) => (
-                    <li key={index} className="mb-2">• {line}</li>
+                    <li key={index} className="flex items-start">
+                      <span className="text-[#00bfff] mr-2">•</span>
+                      <span>{line.trim()}</span>
+                    </li>
                   ))}
                 </ul>
-                <p className="mt-6 text-sm text-gray-400">
-                  Technologies Used: {project.skills.join(', ')}
-                </p>
+                <div className="mt-6">
+                  <p className="text-sm text-gray-400 mb-3">Technologies Used:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.skills.map((skill, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 text-xs bg-gray-800 text-gray-300 rounded border border-gray-700"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
+                <div className="flex flex-wrap gap-4 mt-6 pt-6 border-t border-gray-700">
                 {project.githubLink && (
-                  <div className="mt-6">
                     <a
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-gray-300 hover:text-gray-400"
+                      className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
                     >
-                      <FaGithub className="text-xl" />
-                      <span className="ml-1 text-sm font-normal">Link to GitHub</span>
+                      <FaGithub className="text-xl mr-2" />
+                      <span className="text-sm font-normal">GitHub</span>
                     </a>
-                  </div>
                 )}
 
                 {project.MathMaestroLink && (
-                  <div className="flex items-center justify-start mt-6">
                     <a
                       href={project.MathMaestroLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-gray-400"
+                      className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
                     >
-                      <img
-                        src={MathMaestroImage2}
-                        alt="MathMaestro Logo"
-                        className="w-8 h-8 mr-3 inline-block"
-                      />
-                      <span className="text-sm font-normal">Link to Website</span>
+                      <FaExternalLinkAlt className="text-sm mr-2" />
+                      <span className="text-sm font-normal">Website</span>
                     </a>
-                  </div>
-                )}
+                  )}
+                  
                 {project.ConsultingLink && (
-                  <div className="flex items-center justify-start mt-6">
                     <a
                       href={project.ConsultingLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-gray-400"
+                      className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
                     >
-                      <img
-                        src={TCALogo}
-                        alt="TCA Logo"
-                        className="w-11 h-8 mr-3 inline-block"
-                      />
-                      <span className="text-sm font-normal">Link to Website</span>
+                      <FaExternalLinkAlt className="text-sm mr-2" />
+                      <span className="text-sm font-normal">Website</span>
                     </a>
-                  </div>
                 )}
 
                 {project.DevPostLink && (
-                  <div className="flex items-center justify-start mt-6">
                     <a
                       href={project.DevPostLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-gray-400"
+                      className="flex items-center text-gray-300 hover:text-[#00bfff] transition-colors"
                     >
-                      <img
-                        src={DevPostImage}
-                        alt="DevPost Logo"
-                        className="w-8 h-8 mr-3 inline-block"
-                      />
-                      <span className="text-sm font-normal">Link to DevPost</span>
+                      <FaExternalLinkAlt className="text-sm mr-2" />
+                      <span className="text-sm font-normal">DevPost</span>
                     </a>
-                  </div>
                 )}
               </div>
             </div>
           </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </>
   );
@@ -332,16 +402,25 @@ const Projects = () => {
   ];
 
   return (
-    <div className="text-white min-h-screen flex flex-col items-center py-10">
-      <h1 className="text-5xl font-semibold mt-4 mb-10 text-[#c665db]">Projects</h1>
-      <p className="text-lg text-gray-300 mb-8 max-w-2xl text-center">
-        Some of the cool projects I've built over the past few years! Feel free to click on each card for a more detailed description
-        of each project.
-      </p>
-      <div className={`w-full max-w-4xl ${projects.some(project => project.isOpen) ? 'bg-opacity-30' : ''}`}>
+    <div className="text-white min-h-screen flex flex-col items-center py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16 md:mb-20"
+      >
+        <h1 className="text-5xl font-semibold mt-4 mb-6 text-[#c665db]">Projects</h1>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          Some of the cool projects I've built over the past few years! Click on each card for a more detailed description.
+        </p>
+      </motion.div>
+      
+      <div className="w-full max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />
         ))}
+        </div>
       </div>
     </div>
   );
