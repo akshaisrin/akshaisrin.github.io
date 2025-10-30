@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0ccb6fbf.css",
-    "main.js": "/static/js/main.8064ceca.js",
+    "main.css": "/static/css/main.b7250341.css",
+    "main.js": "/static/js/main.74e54fec.js",
     "static/js/488.1446b851.chunk.js": "/static/js/488.1446b851.chunk.js",
     "static/media/TCALogo.png": "/static/media/TCALogo.b989342544b674ebf7a3.png",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
@@ -15,7 +15,7 @@
     "static/media/heroku.png": "/static/media/heroku.e6097e19e6f076be3f49.png",
     "static/media/twilio.png": "/static/media/twilio.5e37c40664630cf31c32.png",
     "static/media/FIU.jpg": "/static/media/FIU.a29f8b2a377e3d5b073e.jpg",
-    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.9a06151f4ad576783b87.pdf",
+    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.3aeae29043b72309cd26.pdf",
     "static/media/matlab.png": "/static/media/matlab.560187d1130720ba0fcd.png",
     "static/media/profile_pic.jpg": "/static/media/profile_pic.d8fafc562ab688e73bc3.jpg",
     "static/media/scouting_app.png": "/static/media/scouting_app.f048f35c34332481d753.png",
@@ -25,6 +25,7 @@
     "static/media/TerminalSuite.png": "/static/media/TerminalSuite.1225e010a49aaf41ffc4.png",
     "static/media/postgres.png": "/static/media/postgres.a7fa39912c91e079e90b.png",
     "static/media/python.png": "/static/media/python.6a5cbc319ab3ddf8ef92.png",
+    "static/media/jaggernaut.png": "/static/media/jaggernaut.0c7b46887232aae5de81.png",
     "static/media/react.png": "/static/media/react.86c8d9eba03e29814d2a.png",
     "static/media/git.png": "/static/media/git.985a7327fc7347ebdba0.png",
     "static/media/tailwind.png": "/static/media/tailwind.11cb6152b4f48291782a.png",
@@ -41,14 +42,13 @@
     "static/media/NumPy.png": "/static/media/NumPy.ad6ce4268be9e06f8cb4.png",
     "static/media/typescript.png": "/static/media/typescript.af108db04a54d784da9b.png",
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
-    "static/media/goEzz.png": "/static/media/goEzz.ced18fd908efd7edf844.png",
     "index.html": "/index.html",
-    "main.0ccb6fbf.css.map": "/static/css/main.0ccb6fbf.css.map",
-    "main.8064ceca.js.map": "/static/js/main.8064ceca.js.map",
+    "main.b7250341.css.map": "/static/css/main.b7250341.css.map",
+    "main.74e54fec.js.map": "/static/js/main.74e54fec.js.map",
     "488.1446b851.chunk.js.map": "/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ccb6fbf.css",
-    "static/js/main.8064ceca.js"
+    "static/css/main.b7250341.css",
+    "static/js/main.74e54fec.js"
   ]
 }
