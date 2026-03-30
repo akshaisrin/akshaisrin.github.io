@@ -250,13 +250,15 @@ const Home = () => {
             />
 
             <p className="max-w-md text-left text-base leading-relaxed text-gray-400 sm:text-center sm:text-lg">
-              Hey! I'm Akshai — an undergrad at the University of Washington double majoring in
-              CSE and applied math. I'm passionate about robotics, full-stack development,
-              and using AI to solve real problems at scale.<br /><br />
+              Hey! I'm Akshai! I'm an undergrad at the University of Washington double majoring in
+                computer engineering and applied math. I'm passionate about robotics, machine learning, and the math tying it all together.<br /><br />
 
-              At the UW, I serve as Director of Technology for DubHacks and President of the
-              Technology Consulting Association. Outside of work you'll find me at the gym,
-              deep in a sci-fi rabbit hole, or hunting for the best boba in Seattle.
+                At the UW, I'm a research assistant at the WEIRD Lab, where
+                I'm developing robust reinforcement learning policies for dexterous manipulation tasks. I also serve as the Director of Technology for DubHacks,
+                where I'm overseeing the technical infrastructure for the largest collegiate hackathon in the Pacific Northwest. <br /><br />
+
+
+                In my free time, I enjoy working out, watching sci-fi movies and sitcoms, and hunting for the best boba in Seattle! Feel free to reach out anytime!
             </p>
           </div>
         </div>
