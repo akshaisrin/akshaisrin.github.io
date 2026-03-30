@@ -262,19 +262,6 @@ const Experience = () => {
                      Collaborated across engineering teams using Agile/Scrum workflows, maintaining sprint documentation in Jira and technical specs in Confluence`,
       skills: ['C++', 'Python', 'ROS2', 'Git'],
       image: NeptuneImage,
-    },
-    {
-      company: 'Florida International University',
-      position: 'NLP Research Intern',
-      year: 'Sep 2022 - Jun 2024',
-      location: 'Miami, FL',
-      summary:
-        'NLP research to detect literary motifs in folktales using BERT-based sentence transformers',
-      description: `Conducted NLP research to create software that detects literary motifs (recurring symbolic elements) in folktales
-                    Trained Bert-based sentence transformers to apply a semantic search on literary texts, enabling an accurate and efficient identification of thematic elements
-                    Implemented pre-processing pipelines to handle diverse folktale formats and ensure data consistency for training and evaluation`,
-      skills: ['Python', 'PyTorch', 'Hugging Face', 'Git'],
-      image: FIUImage,
     }
   ];
 
