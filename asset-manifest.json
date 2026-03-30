@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a885b95.css",
-    "main.js": "/static/js/main.d7c1613c.js",
+    "main.css": "/static/css/main.9e725f52.css",
+    "main.js": "/static/js/main.862ba36a.js",
     "static/js/488.1446b851.chunk.js": "/static/js/488.1446b851.chunk.js",
     "static/media/TCALogo.png": "/static/media/TCALogo.b989342544b674ebf7a3.png",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
@@ -42,12 +42,12 @@
     "static/media/hugging.png": "/static/media/hugging.6d0d997de0504608634d.png",
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/index.html",
-    "main.2a885b95.css.map": "/static/css/main.2a885b95.css.map",
-    "main.d7c1613c.js.map": "/static/js/main.d7c1613c.js.map",
+    "main.9e725f52.css.map": "/static/css/main.9e725f52.css.map",
+    "main.862ba36a.js.map": "/static/js/main.862ba36a.js.map",
     "488.1446b851.chunk.js.map": "/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a885b95.css",
-    "static/js/main.d7c1613c.js"
+    "static/css/main.9e725f52.css",
+    "static/js/main.862ba36a.js"
   ]
 }
