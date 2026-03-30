@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Projects from './components/Projects';
@@ -7,23 +7,19 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 
-
-
 const App = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 to-slate-800">
-      <Router>
+    <div className="relative min-h-screen bg-[#0c0d14]">
+<div className="relative z-10">
         <Header />
         <div className="pt-20">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/skills" element={<Skills />} />
-          </Routes>
+          <Home />
+          <Experience />
+          <Projects />
+          <Skills />
         </div>
         <Footer />
-      </Router>
+      </div>
     </div>
   );
 };

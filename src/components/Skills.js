@@ -1,117 +1,85 @@
-import React from "react";
-import { motion } from "framer-motion";
-
-const skillsData = [
-  {
-    category: "Languages/Tools",
-    skills: [
-      { name: "Python", image: require("../assets/images/skills/python.png") },
-      { name: "Java", image: require("../assets/images/skills/java.png") },
-      { name: "JavaScript", image: require("../assets/images/skills/js.png") },
-      { name: "C# (.NET)", image: require("../assets/images/skills/c-sharp.png") },
-      { name: "Dart", image: require("../assets/images/skills/dart.png") },
-      { name: "TypeScript", image: require("../assets/images/skills/typescript.png") },
-      { name: "HTML", image: require("../assets/images/skills/html.png") },
-      { name: "CSS", image: require("../assets/images/skills/css-3.png") },
-      { name: "MATLAB", image: require("../assets/images/skills/matlab.png") },
-      { name: "Git", image: require("../assets/images/skills/git.png") },
-    ],
-  },
-  {
-    category: "Frameworks/Libraries",
-    skills: [
-      { name: "Node.js", image: require("../assets/images/skills/nodejs.png") },
-      { name: "Next.js", image: require("../assets/images/skills/nextjs.png") },
-      { name: "Flutter", image: require("../assets/images/skills/flutter.png") },
-      { name: "Pandas", image: require("../assets/images/skills/pandas.png") },
-      { name: "NumPy", image: require("../assets/images/skills/NumPy.png") },
-      { name: "React.js", image: require("../assets/images/skills/react.png") },
-      { name: "Tailwind.css", image: require("../assets/images/skills/tailwind.png") },
-    ],
-  },
-  {
-    category: "Technologies",
-    skills: [
-      { name: "AWS", image: require("../assets/images/skills/aws.png") },
-      { name: "MySQL", image: require("../assets/images/skills/mysql.png") },
-      { name: "PostgreSQL", image: require("../assets/images/skills/postgres.png") },
-      { name: "MongoDB", image: require("../assets/images/skills/mongo.png") },
-      { name: "Postman", image: require("../assets/images/skills/postman.png") },
-      { name: "Heroku", image: require("../assets/images/skills/heroku.png") },
-      { name: "Twilio", image: require("../assets/images/skills/twilio.png") },
-    ],
-  },
-];
+import React from 'react';
+import { motion } from 'framer-motion';
+import { skillsData } from '../data/skillsRegistry';
 
 const Skills = () => {
   return (
-    <div className="text-white min-h-screen flex flex-col items-center py-10">
-      <motion.h1 className="text-5xl font-semibold mt-4 mb-16 text-[#c665db]">
-        Skills
-      </motion.h1>
+    <section id="skills" className="bg-black text-white">
+      <div className="flex justify-center px-5 pt-10 pb-4 sm:pt-14 sm:pb-6" aria-hidden>
+        <div className="flex items-center gap-3.5">
+          <div className="h-px w-24 rounded-full bg-gradient-to-r from-transparent via-violet-400/40 to-violet-400/70 sm:w-32 md:w-40" />
+          <div className="h-2 w-2 shrink-0 rotate-45 bg-gradient-to-br from-violet-300 to-indigo-400 shadow-[0_0_16px_rgba(167,139,250,0.55)]" />
+          <div className="h-px w-24 rounded-full bg-gradient-to-l from-transparent via-violet-400/40 to-violet-400/70 sm:w-32 md:w-40" />
+        </div>
+      </div>
 
-      <motion.p className="text-lg text-gray-300 mb-16 max-w-2xl text-center">
-        Some of the languages, frameworks, and technologies I have experience with!
-      </motion.p>
+      <div className="mx-auto w-full max-w-5xl px-5 pb-24 pt-4 sm:px-6 sm:pb-28 sm:pt-6 md:pt-8 lg:max-w-6xl lg:px-8">
+        <motion.div
+          className="mb-12 md:mb-16"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55 }}
+        >
+          <p className="mb-3 font-mono text-xs tracking-[0.35em] text-violet-400/90 uppercase sm:text-sm">
+            Skills
+          </p>
+          <h2 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            My Tech Stack
+          </h2>
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-gray-500 sm:mt-10 sm:text-lg">
+            Languages, frameworks, and technologies I have experience with
+          </p>
+        </motion.div>
 
-      <div className="w-full max-w-5xl space-y-10">
-        {skillsData.map((category, index) => (
-          <div key={index} className="space-y-4">
-            <motion.h2
-              className="text-3xl font-semibold text-[#c665db] text-center mb-6"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.5 }}
-            >
-              {category.category}
-            </motion.h2>
-
-            <div
-              className="rounded-2xl p-4"
-              style={{
-                border: "2px solid #00bfff",
-                boxShadow: "0 0 20px rgba(0, 191, 255, 0.6)",
-              }}
-            >
-        <div className="flex flex-wrap justify-center gap-6">
-          {category.skills.map((skill, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.5 }}
-              whileHover={{ scale: 1.2 }}
-              className="flex flex-col items-center justify-center"
-            >
-            <motion.div
-              className="w-16 h-16 rounded-full overflow-hidden bg-gray-700 mt-2 shadow-lg flex justify-center items-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.5 }}
-            >
-              <img
-                src={skill.image}
-                alt={skill.name}
-                className="object-contain w-10 h-10"
-              />
-            </motion.div>
-              <motion.p
-                className="mt-1 mb-2 text-white text-xs text-center"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5 }}
+        <div className="flex flex-col gap-10 md:gap-12">
+          {skillsData.map((category, index) => (
+            <div key={index}>
+              <motion.h3
+                className="mb-5 font-mono text-sm uppercase tracking-[0.35em] text-gray-500 sm:text-base"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.06 }}
               >
+                {category.category}
+              </motion.h3>
 
-              {skill.name}
-              </motion.p>
-            </motion.div>
-            ))}
-          </div>
+              <motion.div
+                className="rounded-2xl border border-white/[0.08] bg-black p-6 transition-colors duration-200 sm:p-7"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.06 }}
+              >
+                <div className="flex flex-wrap gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-9">
+                  {category.skills.map((skill, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 12 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.45, delay: idx * 0.03 }}
+                      className="group flex flex-col items-center gap-2.5"
+                    >
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.02] shadow-[0_0_0_0_transparent] transition-all duration-300 ease-out group-hover:border-violet-400/55 group-hover:bg-violet-500/[0.08] group-hover:shadow-[0_0_32px_-6px_rgba(167,139,250,0.7),0_0_56px_-10px_rgba(139,92,246,0.35),0_0_0_1px_rgba(167,139,250,0.12)] sm:h-[3.75rem] sm:w-[3.75rem]">
+                        <img
+                          src={skill.image}
+                          alt={skill.name}
+                          className={`h-9 w-9 object-contain sm:h-10 sm:w-10 ${skill.invert ? 'brightness-0 invert opacity-90' : ''}`}
+                        />
+                      </div>
+                      <p className="text-center font-mono text-xs text-gray-500">{skill.name}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          ))}
         </div>
-        </div>
-      ))}
-  </div>
-</div>
-  );};
+      </div>
+    </section>
+  );
+};
 
 export default Skills;
