@@ -5,6 +5,19 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
+  // If someone lands on a deep-link (e.g. `/#projects`), ensure we scroll to the
+  // matching section once the initial render completes.
+  useEffect(() => {
+    const rawHash = window.location.hash || '';
+    const id = rawHash.startsWith('#') ? rawHash.slice(1) : rawHash;
+    const valid = new Set(['home', 'projects', 'experience', 'skills']);
+    if (!id || !valid.has(id)) return;
+
+    setActiveSection(id);
+    // Wait a tick so the section elements exist in the DOM.
+    setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'auto' }), 0);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'projects', 'experience', 'skills'];
@@ -25,6 +38,12 @@ const Header = () => {
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    // Keep the URL in sync so `/projects` etc work like deep-links.
+    // Note: on full page reload GitHub Pages will still serve `404.html`,
+    // which redirects to `/#projects` (so the path may not persist).
+    const baseUrl = (process.env.PUBLIC_URL || '').replace(/\/$/, '');
+    const nextPath = id === 'home' ? (baseUrl || '/') : `${baseUrl}/${id}`;
+    window.history.pushState({}, '', nextPath);
     setMenuOpen(false);
   };
 
