@@ -91,6 +91,14 @@ export function resolveProjectSkillTag(tag) {
     if (s) return toMeta(s);
   }
 
+  if (/\bgoogle\b/i.test(raw) || /g-?suite/i.test(raw) || /google\s+workspace/i.test(raw)) {
+    return { image: require('../assets/images/skills/google.png'), invert: false };
+  }
+
+  if (/\bmeta\b/i.test(raw) || /meta\s+raybans/i.test(raw)) {
+    return { image: require('../assets/images/skills/meta.png'), invert: false };
+  }
+
   for (const s of flat) {
     if (s.name.toLowerCase().normalize('NFKC') === p) return toMeta(s);
   }

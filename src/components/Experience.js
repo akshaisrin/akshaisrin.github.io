@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import FIUImage from '../assets/images/FIU.jpg';
 import DubHacksImage from '../assets/images/DubHacks.jpg';
 import NeptuneImage from '../assets/images/Neptune.jpeg';
 import TCALogo from '../assets/images/TCALogo.png';
@@ -191,12 +190,12 @@ const Experience = () => {
   const experience = [
     {
       company: 'General Motors',
-      position: 'Incoming Software Engineering Intern',
+      position: 'Incoming Machine Learning Engineering Intern',
       year: 'Summer 2026',
       location: 'Sunnyvale, CA',
       summary:
-        'Autonomous Vehicles! More information to come soon!',
-      description: `Autonomous Vehicles! More to come soon!`,
+        "ML for Cruise's Autonomous Vehicles!",
+      description: `Will be training models for Cruise's autonomous vehicles as part of the AV Analysis Team`,
       skills: ['Python', 'TypeScript', 'ROS', 'Webviz'],
       image: GMLogo,
     },
@@ -255,7 +254,7 @@ const Experience = () => {
       year: 'Jun 2025 - Sep 2025',
       location: 'Burlingame, CA',
       summary:
-        'Control systems software and fault detection for robotic endoscopy',
+        'Controls and fault detection for robotic endoscopy',
       description: ` Implemented control systems software for robotic endoscope using ROS and Python, orchestrating communication between controllers, sensors, and actuators
                      Built C++ fault detection framework for haptic input device with automatic failsafe protocols, preventing unsafe robot operations during live procedures
                      Designed tendon saturation algorithm with integrated haptic feedback that dynamically generates resistive forces when tendons reach operational limits, preventing mechanical damage to endoscope

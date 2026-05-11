@@ -13,13 +13,14 @@ import ConsultingImage from '../assets/images/consulting.jpg';
 import FitFinderImage from '../assets/images/FitFinder.png';
 import BrownZeldaImage from '../assets/images/BrownZelda.png';
 import TradingHubImage from '../assets/images/tradinghub.jpeg';
+import BarelyAtWork from '../assets/images/barelyatwork.jpg';
 
 function ProjectSkillIcons({ skills, size = 'sm' }) {
   const box =
     size === 'lg'
       ? 'inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] sm:h-11 sm:w-11'
       : 'inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-800/50 sm:h-9 sm:w-9';
-  const img =
+  const baseImg =
     size === 'lg'
       ? 'h-6 w-6 object-contain sm:h-7 sm:w-7'
       : 'h-5 w-5 object-contain sm:h-6 sm:w-6';
@@ -27,9 +28,20 @@ function ProjectSkillIcons({ skills, size = 'sm' }) {
   const items = skills.flatMap((skill, i) => {
     const meta = resolveProjectSkillTag(skill);
     if (meta == null) return [];
+    const isGoogle = meta.image?.includes('google.png');
+    const img = isGoogle
+      ? size === 'lg'
+        ? 'h-8 w-8 object-contain sm:h-9 sm:w-9'
+        : 'h-7 w-7 object-contain sm:h-8 sm:w-8'
+      : baseImg;
+    const boxClass = isGoogle
+      ? size === 'lg'
+        ? 'inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] sm:h-14 sm:w-14'
+        : 'inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800/50 sm:h-11 sm:w-11'
+      : box;
     return [
       <li key={`${skill}-${i}`}>
-        <span title={skill} className={box}>
+        <span title={skill} className={boxClass}>
           <img
             src={meta.image}
             alt=""
@@ -277,6 +289,16 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
   const projects = [
     {
+      title: 'BarelyAtWork',
+      shortDescription: 'Hands-free agentic workflow builder for the Meta Raybans',
+      description: `Developed a hands-free agentic workflow builder for the Meta Raybans, enabling users to integrate 3rd party tools to create custom voice-activated workflows from anywhere in the world
+                    Engineered an agentic pipeline that converts natural language into decomposed, step-by-step task representations before passing to an LLM, which resolves and executes each step using pre-integrated app context
+                    Implemented a low-latency audio loop using Deepgram for transcription, Gemma for intent parsing, and ElevenLabs for streaming spoken confirmation back through the glasses
+                    Integrated 6+ third-party services via OAuth, enabling the agent to autonomously orchestrate multi-service actions (messaging, calendar updates, ride booking) from a single voice command`,
+      skills: ['Meta Raybans', 'Python', 'FastAPI','Deepgram', 'Gemma API', 'MongoDB', 'React.js', 'ElevenLabs', "3rd-party APIs (Notion, Slack, G-Suite, Uber, Domino's)", 'Git'],
+      image: BarelyAtWork,
+    },
+    {
       title: 'CalcMaestro.com',
       shortDescription: 'Website for my calculus test-prep company providing students with practice resources.',
       description: `Developed website for my calculus test-prep company supporting scalable, subscription-based content delivery
@@ -316,7 +338,7 @@ const Projects = () => {
                       Implemented PostgreSQL caching layer with automatic data validation across multiple providers (Yahoo Finance, Polygon, Finnhub), reducing external API calls by 80%
                       Developed WebSocket-based backtesting engine with streamed simulation updates, Ollama query parsing, and technical indicator calculations (RSI, SMA, Bollinger Bands)
                       Containerized app with Docker Compose using multi-stage builds and Nginx reverse proxy for deployment`,
-        skills: ['Python', 'FastAPI', 'PostgreSQL', 'React', 'JavaScript', 'Docker', 'Nginx', 'Git'],
+        skills: ['Python', 'FastAPI', 'PostgreSQL', 'React.js', 'JavaScript', 'Docker', 'Nginx', 'Git'],
         image: TradingHubImage,
     },
     {

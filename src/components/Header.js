@@ -10,7 +10,7 @@ const Header = () => {
   useEffect(() => {
     const rawHash = window.location.hash || '';
     const id = rawHash.startsWith('#') ? rawHash.slice(1) : rawHash;
-    const valid = new Set(['home', 'projects', 'experience', 'skills']);
+    const valid = new Set(['home', 'experience', 'projects', 'skills']);
     if (!id || !valid.has(id)) return;
 
     setActiveSection(id);
@@ -20,8 +20,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'experience', 'skills'];
-      const scrollPos = window.scrollY + window.innerHeight * 0.3;
+      const sections = ['home', 'experience', 'projects', 'skills'];
+      const scrollPos = window.scrollY + window.innerHeight * 0.5;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -74,8 +74,8 @@ const Header = () => {
 
         <nav className="hidden md:flex space-x-8">
           <button onClick={() => scrollTo('home')} className={navLinkClass('home')}>Home</button>
-          <button onClick={() => scrollTo('projects')} className={navLinkClass('projects')}>Projects</button>
           <button onClick={() => scrollTo('experience')} className={navLinkClass('experience')}>Experience</button>
+          <button onClick={() => scrollTo('projects')} className={navLinkClass('projects')}>Projects</button>
           <button onClick={() => scrollTo('skills')} className={navLinkClass('skills')}>Skills</button>
           <a
             href={require('../assets/files/Akshai Srinivasan- Resume.pdf')}
@@ -100,8 +100,8 @@ const Header = () => {
           className={`${glassBar} text-white flex flex-col items-start px-6 pb-5 pt-1 md:hidden space-y-4 border-t border-white/[0.05]`}
         >
           <button onClick={() => scrollTo('home')} className={navLinkClass('home')}>Home</button>
-          <button onClick={() => scrollTo('projects')} className={navLinkClass('projects')}>Projects</button>
           <button onClick={() => scrollTo('experience')} className={navLinkClass('experience')}>Experience</button>
+          <button onClick={() => scrollTo('projects')} className={navLinkClass('projects')}>Projects</button>
           <button onClick={() => scrollTo('skills')} className={navLinkClass('skills')}>Skills</button>
           <a
             href={require('../assets/files/Akshai Srinivasan- Resume.pdf')}
