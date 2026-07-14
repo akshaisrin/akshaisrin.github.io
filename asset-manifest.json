@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6994b36c.css",
-    "main.js": "/static/js/main.5dc1b0ba.js",
+    "main.js": "/static/js/main.729c2ee4.js",
     "static/js/488.1446b851.chunk.js": "/static/js/488.1446b851.chunk.js",
     "static/media/TCALogo.png": "/static/media/TCALogo.b989342544b674ebf7a3.png",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
@@ -9,10 +9,11 @@
     "static/media/CalcMaestro.png": "/static/media/CalcMaestro.7ad96fe64608b8af2bec.png",
     "static/media/consulting.jpg": "/static/media/consulting.a77d2b42d84df18a0351.jpg",
     "static/media/BrownZelda.png": "/static/media/BrownZelda.8a6d1723bd309fac6bb2.png",
+    "static/media/duck.png": "/static/media/duck.574b6fb387dee9696df0.png",
     "static/media/heroku.png": "/static/media/heroku.e6097e19e6f076be3f49.png",
     "static/media/tradinghub.jpeg": "/static/media/tradinghub.0f4c2459255c506925f3.jpeg",
-    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.fd22316a72395014a078.pdf",
     "static/media/google.png": "/static/media/google.429f1f8918a380761c3f.png",
+    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.eccdfb53f44c9ba878e9.pdf",
     "static/media/matlab.png": "/static/media/matlab.560187d1130720ba0fcd.png",
     "static/media/scouting_app.png": "/static/media/scouting_app.f048f35c34332481d753.png",
     "static/media/dart.png": "/static/media/dart.2b8404dc9215f1cea757.png",
@@ -45,11 +46,11 @@
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/index.html",
     "main.6994b36c.css.map": "/static/css/main.6994b36c.css.map",
-    "main.5dc1b0ba.js.map": "/static/js/main.5dc1b0ba.js.map",
+    "main.729c2ee4.js.map": "/static/js/main.729c2ee4.js.map",
     "488.1446b851.chunk.js.map": "/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6994b36c.css",
-    "static/js/main.5dc1b0ba.js"
+    "static/js/main.729c2ee4.js"
   ]
 }
