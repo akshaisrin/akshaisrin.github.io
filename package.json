@@ -4,7 +4,6 @@
   "private": false,
   "homepage": "https://akshaisrin.live",
   "dependencies": {
-    "-": "^0.0.1",
     "cra-template": "1.2.0",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.14.4",
@@ -14,7 +13,6 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.0.2",
     "react-scripts": "5.0.1",
-    "save-dev": "^0.0.1-security",
     "tailwindcss": "^3.4.16",
     "web-vitals": "^4.2.4"
   },

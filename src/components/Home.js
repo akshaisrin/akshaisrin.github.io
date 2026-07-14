@@ -110,9 +110,9 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
             >
-              Incoming @ General Motors
+              MLE Intern @ General Motors
               <RoleSeparator />
-              CSE + Applied Math @ UW
+              CE + AMATH @ UW
               <RoleSeparator />
               Director of Technology @ DubHacks
             </motion.p>
@@ -184,14 +184,13 @@ const Home = () => {
               </h2>
               <p className="mt-10 text-base leading-relaxed text-gray-400 sm:text-lg">
                 Hey! I'm Akshai! I'm an undergrad at the University of Washington double majoring in
-                computer engineering and applied math. I'm passionate about robotics, machine learning, and the math tying it all together.<br /><br />
+                computer engineering and applied math. I'm interested in robot learning, physical AI, humanoid robots, and autonomous vehicles.<br /><br />
 
-                At the UW, I'm a research assistant at the WEIRD Lab, where
-                I'm developing robust reinforcement learning policies for dexterous manipulation tasks. I also serve as the Director of Technology for DubHacks,
+                At the UW, I'm conducting reinforcement learning research addressing the sim-to-real gap for robotic manipulators. I also serve as the Director of Technology for DubHacks,
                 where I'm overseeing the technical infrastructure for the largest collegiate hackathon in the Pacific Northwest. <br /><br />
 
 
-                In my free time, I enjoy working out, watching sci-fi movies and sitcoms, and hunting for the best boba in Seattle! Feel free to reach out anytime!
+                In my free time, I enjoy working out, playing retro video games, and hunting for the best boba in Seattle! Feel free to reach out anytime!
               </p>
             </motion.div>
 

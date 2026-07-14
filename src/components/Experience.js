@@ -189,14 +189,16 @@ const ExperienceCard = ({ experience, index }) => {
 const Experience = () => {
   const experience = [
     {
-      company: 'General Motors',
-      position: 'Incoming Machine Learning Engineering Intern',
-      year: 'Summer 2026',
+      company: 'General Motors: Cruise',
+      position: 'Machine Learning Engineering Intern',
+      year: 'June 2026 - Present',
       location: 'Sunnyvale, CA',
       summary:
-        "ML for Cruise's Autonomous Vehicles!",
-      description: `Will be training models for Cruise's autonomous vehicles as part of the AV Analysis Team`,
-      skills: ['Python', 'TypeScript', 'ROS', 'Webviz'],
+        "AV infrastructure and 3D visualization tools to accelerate ML workflows",
+      description: `Developing autonomous vehicle infrastructure for a web-based platform visualizing multi-source ROS data streams
+                    Accelerating machine learning workflows by optimizing spatial data rendering tools used to validate perception and localization model outputs
+                    Optimizing 3D panel data hierarchy interface to streamline how engineers navigate, filter, and render dense spatial datasets and real-time sensor logs`,
+      skills: ['TypeScript', 'ROS', 'Python', 'Webviz.io', 'Git'],
       image: GMLogo,
     },
     {
@@ -206,7 +208,7 @@ const Experience = () => {
       location: 'Seattle, WA',
       summary:
         'Reinforcement learning research on dextrous sim-to-real robotic manipulation',
-      description: `Developing sim-to-real reinforcement learning policies for robotic assembly tasks under Dr. Abhishek Gupta using Isaac Lab and RSL-RL, with WandB for experiment tracking
+      description: `Developing sim-to-real reinforcement learning policies for robotic assembly tasks using Isaac Lab and RSL-RL, with WandB for experiment tracking
                      Tuning PPO hyperparameters and reward weights to maximize dextrous manipulation success rate under domain randomization of object poses and dynamics parameters`,
       skills: ['Python', 'PyTorch', 'Isaac Lab', 'NVIDIA Omniverse', 'WandB'],
       image: AllenLogo,
@@ -239,7 +241,7 @@ const Experience = () => {
       year: 'Jan 2025 - Mar 2026',
       location: 'Seattle, WA',
       summary:
-        "Founded and ran the UW's first AI-driven consultancy helping businesses streamline operations and deploy intelligent solutions",
+        "Founded and ran the UW's first ML consultancy helping businesses streamline operations and deploy intelligent solutions",
       description: ` Founded and leading a 40+ member student organization to deliver AI-driven tech solutions for businesses
                      Built pipeline of 6 active client projects within 3 months, including computer vision analytics for regional bagel chain and cloud infrastructure migration for municipal fire department
                      Developed agentic AI outreach bot that utilizes the Anthropic/Claude API to discover and initiate first-level sales funnel contact with potential clients (2000+ leads)

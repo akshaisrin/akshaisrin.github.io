@@ -14,6 +14,7 @@ import FitFinderImage from '../assets/images/FitFinder.png';
 import BrownZeldaImage from '../assets/images/BrownZelda.png';
 import TradingHubImage from '../assets/images/tradinghub.jpeg';
 import BarelyAtWork from '../assets/images/barelyatwork.jpg';
+import Duck from '../assets/images/duck.png';
 
 function ProjectSkillIcons({ skills, size = 'sm' }) {
   const box =
@@ -254,9 +255,9 @@ const ProjectCard = ({ project, index }) => {
                       <span>Website</span>
                     </a>
                   )}
-                  {project.ConsultingLink && (
+                  {project.websiteLink && (
                     <a
-                      href={project.ConsultingLink}
+                      href={project.websiteLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={modalLinkClass}
@@ -288,6 +289,16 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'DuckRL',
+      shortDescription: 'Robust reinforcement learning locomotionfor Disney BDX droids',
+      description: `Investigated sim-to-real transfer for reinforcement learning-based bipedal locomotion via Rapid Motor Adaptation (RMA) using Proximal Policy Optimization (PPO), PyTorch, and MuJoCo Sim
+                    Ablated domain randomization across physics parameters (mass, friction, motor gain) using extrinsic-conditioned MLP neural networks to identify strategies driving sim-to-real robustness
+                    Stress-tested learned policies under morphological perturbations (link lengths, center of mass, foot geometry) to characterize failure modes of current DR pipelines`,
+      skills: ['Python', 'PyTorch', 'MuJoCo Sim', 'Reinforcement Learning', 'PPO', 'RMA', 'Git'],
+      image: Duck,
+      websiteLink: 'https://akshaisrin.github.io/DuckRLWebsite'
+    },
     {
       title: 'BarelyAtWork',
       shortDescription: 'Hands-free agentic workflow builder for the Meta Raybans',
@@ -383,7 +394,7 @@ const Projects = () => {
                       Designed contact form allowing potential clients to reach out for future engagements`,
         skills: ['React.js', 'Node.js', 'Tailwind.css', 'Git'],
         image: ConsultingImage,
-        ConsultingLink: 'https://uwtechconsulting.com',
+        websiteLink: 'https://uwtechconsulting.com',
       },
       {
         title: 'Portfolio Website',
