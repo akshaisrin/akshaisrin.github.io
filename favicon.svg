@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Akshai Srinivasan mark: the six-axis arm reduced to its silhouette, joints in mint. -->
+  <rect width="64" height="64" rx="14" fill="#0f1f3d"/>
+  <rect x="10" y="50" width="22" height="5" rx="1.5" fill="#e6edf7"/>
+  <path d="M21 50 L21 36" stroke="#e6edf7" stroke-width="9" stroke-linecap="round"/>
+  <path d="M21 36 L30 19" stroke="#e6edf7" stroke-width="9" stroke-linecap="round"/>
+  <path d="M30 19 L48 15" stroke="#e6edf7" stroke-width="8" stroke-linecap="round"/>
+  <path d="M48 15 L54 21 M48 15 L55 11" stroke="#e6edf7" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="21" cy="36" r="4.2" fill="#3ddc84"/>
+  <circle cx="30" cy="19" r="4.2" fill="#3ddc84"/>
+</svg>

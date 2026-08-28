@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6994b36c.css",
-    "main.js": "/static/js/main.729c2ee4.js",
+    "main.css": "/static/css/main.0bbc94b7.css",
+    "main.js": "/static/js/main.7fbe46f5.js",
     "static/js/488.1446b851.chunk.js": "/static/js/488.1446b851.chunk.js",
     "static/media/TCALogo.png": "/static/media/TCALogo.b989342544b674ebf7a3.png",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
@@ -10,15 +10,16 @@
     "static/media/consulting.jpg": "/static/media/consulting.a77d2b42d84df18a0351.jpg",
     "static/media/BrownZelda.png": "/static/media/BrownZelda.8a6d1723bd309fac6bb2.png",
     "static/media/duck.png": "/static/media/duck.574b6fb387dee9696df0.png",
+    "static/media/website.jpg": "/static/media/website.123cc14b9669c8cf17a4.jpg",
     "static/media/heroku.png": "/static/media/heroku.e6097e19e6f076be3f49.png",
+    "static/media/osifont.ttf": "/static/media/osifont.42b2346dbbecfbcea684.ttf",
     "static/media/tradinghub.jpeg": "/static/media/tradinghub.0f4c2459255c506925f3.jpeg",
     "static/media/google.png": "/static/media/google.429f1f8918a380761c3f.png",
-    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.eccdfb53f44c9ba878e9.pdf",
+    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.242c0c53e77183dc39e1.pdf",
     "static/media/matlab.png": "/static/media/matlab.560187d1130720ba0fcd.png",
     "static/media/scouting_app.png": "/static/media/scouting_app.f048f35c34332481d753.png",
     "static/media/dart.png": "/static/media/dart.2b8404dc9215f1cea757.png",
     "static/media/barelyatwork.jpg": "/static/media/barelyatwork.6dd66c01ee837fb9a8d7.jpg",
-    "static/media/website.jpg": "/static/media/website.f3e29cb085d2718e880b.jpg",
     "static/media/cpp.png": "/static/media/cpp.0462f66fd457da323b4d.png",
     "static/media/FitFinder.png": "/static/media/FitFinder.072e30d60269f0854c8a.png",
     "static/media/TerminalSuite.png": "/static/media/TerminalSuite.1225e010a49aaf41ffc4.png",
@@ -45,12 +46,12 @@
     "static/media/hugging.png": "/static/media/hugging.6d0d997de0504608634d.png",
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/index.html",
-    "main.6994b36c.css.map": "/static/css/main.6994b36c.css.map",
-    "main.729c2ee4.js.map": "/static/js/main.729c2ee4.js.map",
+    "main.0bbc94b7.css.map": "/static/css/main.0bbc94b7.css.map",
+    "main.7fbe46f5.js.map": "/static/js/main.7fbe46f5.js.map",
     "488.1446b851.chunk.js.map": "/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6994b36c.css",
-    "static/js/main.729c2ee4.js"
+    "static/css/main.0bbc94b7.css",
+    "static/js/main.7fbe46f5.js"
   ]
 }
