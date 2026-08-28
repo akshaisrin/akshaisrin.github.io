@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "src/index.css"
+        ],
+        "createdAt": "2026-08-28T04:44:10.753Z",
+        "reason": "sanctioned exception: the whole site is a blueprint/drawing sheet (DESIGN.md Kinematic Blueprint); the grid is the sheet's drafting grid, which the rule text itself reserves for blueprint surfaces; added by Claude after the user asked for depth/atmosphere on 2026-08-27"
+      }
+    ]
+  }
+}

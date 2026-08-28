@@ -1,0 +1,154 @@
+{
+  "title": "Choose the visual world for akshaisrin.live",
+  "question": "The roll assigned Teach Pendant. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Teach Pendant",
+      "kicker": "THE ROLL",
+      "lineage": "industrial robot teach pendants (KUKA smartPAD, Fanuc iPendant, UR Polyscope)",
+      "thesis": "The portfolio is the handheld you use to move a real robot: a safety-yellow, graphite-railed HMI whose program is Akshai, with sim-to-real as the literal interface.",
+      "palette": ["#F4C10F", "#1F2226", "#E4E7EA", "#0D0F11", "#2FA84F", "#D9271E"],
+      "materials": ["rubberized safety-yellow bumper", "graphite housing", "matte anti-glare LCD", "membrane keys with status LEDs"],
+      "viewport": "A full pendant face. Top status strip: name, city, build date, a green READY lamp. Main LCD: AKSHAI SRINIVASAN in condensed industrial caps as the loaded program, CE + AMATH @ UW beneath, then a three-row program tree: GM Cruise MLE Intern, UW WEIRD Lab RL research, DubHacks Director of Technology, each with a RUNNING lamp. Right rail: six jog keys A1-A6 that are the section nav (About, Experience, Projects, Skills, Resume, Contact). Bottom key row: two large yellow physical keys, RESUME.PDF and EMAIL, plus GitHub and LinkedIn as smaller keys. The E-stop mushroom is real: it halts all page motion (prefers-reduced-motion toggle). On phones the pendant is held portrait; the jog rail becomes the bottom key row.",
+      "risk": "Reads as a costume if the hardware is drawn as decoration around an ordinary page; the chrome must carry navigation, state, and actions or it is noise. Dense HMI grammar can crush mobile. Yellow-black reads construction site if it leaks off the bumper zones onto content.",
+      "raised": [
+        { "from": "Cloud Quarry", "raise": "Hard-edged screens with real gaps: each section is one full pendant screen, never a soft continuous fade." },
+        { "from": "Glaze River Shelf", "raise": "Proof on the face: every experience and project shows its stack and one outcome metric without opening a modal." },
+        { "from": "VHS Rental Wall", "raise": "Genre aisles: projects shelved in three named lanes (Robotics & RL, Systems & Infra, Games & Play) with a one-line shelf-talker each." },
+        { "from": "Split-Flap Concourse", "raise": "Fixed-cell numerals: every readout ticks in place without reflow; one condensed face across the whole board." },
+        { "from": "Algorave Floor", "raise": "One clock: every state change on the page runs on a single mechanical tick, no easing float, no glow." }
+      ],
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          { "label": "status strip: name · Seattle · READY", "x": 0, "y": 0, "w": 12, "h": 1 },
+          { "label": "LCD: program name + CE/AMATH", "x": 0, "y": 1, "w": 9, "h": 3, "accent": true },
+          { "label": "program tree: 3 running roles", "x": 0, "y": 4, "w": 9, "h": 3 },
+          { "label": "jog rail A1-A6 = section nav", "x": 9, "y": 1, "w": 3, "h": 7, "accent": true },
+          { "label": "keys: RESUME.PDF · EMAIL · GH · LI", "x": 0, "y": 7, "w": 9, "h": 2, "accent": true },
+          { "label": "E-STOP (halts motion)", "x": 9, "y": 8, "w": 3, "h": 2 },
+          { "label": "yellow bumper", "x": 0, "y": 9, "w": 9, "h": 1 }
+        ]
+      }
+    },
+    {
+      "id": "model-pick",
+      "label": "Training Run",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "experiment-tracking dashboards (WandB, TensorBoard)",
+      "thesis": "A career plotted as a training run: reward climbing, honestly not yet converged.",
+      "palette": ["#FAFAFA", "#1A1A1A", "#F26B1D", "#0F8B8D", "#D7DADF"],
+      "materials": ["white chart panels", "hairline gridlines", "run-color strokes", "mono config tables"],
+      "viewport": "Name as the run name. One large reward-vs-steps curve fills the viewport, each experience an annotated step (Neptune, WEIRD Lab, GM Cruise), the line still rising at the right edge. Beside it the run config table: major = CE + AMATH, institution = UW, roles = GM Cruise / WEIRD Lab / DubHacks. Resume and email as the panel's action buttons.",
+      "risk": "Familiar: dashboards are where many ML portfolios land, and plotting your own life can read as self-congratulation unless the not-converged honesty is visible in the chart itself.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          { "label": "run name: Akshai Srinivasan", "x": 0, "y": 0, "w": 8, "h": 2, "accent": true },
+          { "label": "actions: resume · email", "x": 8, "y": 0, "w": 4, "h": 2 },
+          { "label": "reward vs steps curve, annotated", "x": 0, "y": 2, "w": 8, "h": 8, "accent": true },
+          { "label": "run config table", "x": 8, "y": 2, "w": 4, "h": 8 }
+        ]
+      }
+    },
+    {
+      "id": "challenger-splitflap",
+      "label": "Split-Flap Concourse",
+      "verdict": "competitive",
+      "lineage": "rail concourse departure boards",
+      "thesis": "The resume as a departures board: rows ranked by time, roles as destinations, Present as BOARDING.",
+      "palette": ["#0E0E0E", "#F2F2F2", "#8A8F94", "#F0A020"],
+      "materials": ["matte black flaps", "white paint letters", "brushed steel frame", "amber row lamps"],
+      "viewport": "A board: YEAR / ROLE / ORG / STATUS columns, name in the header cell, the three current roles flapping into BOARDING, past roles ARRIVED.",
+      "case": "Fuses cleanly and everyone reads a departures board; it says trajectory, but nothing about robots, so positioning is lost.",
+      "risk": "Near-black with one amber accent is the calibration the category already ships; flip counters are a known web trope.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse.webp"
+    },
+    {
+      "id": "challenger-noir",
+      "label": "Noir One-Sheet",
+      "verdict": "competitive",
+      "lineage": "postwar crime film posters, two-ink duotone",
+      "thesis": "The figure is small and the shadow is four times his size: the shadow is the trajectory, the billing block is the resume.",
+      "palette": ["#111111", "#E8A33D", "#EFE6D3"],
+      "materials": ["ink black", "sour amber", "cream stock", "cast shadow shapes"],
+      "viewport": "Name in condensed caps like a charge read out, a small figure throwing a long shadow toward robotics, the three roles ruled tight in a billing block at the foot.",
+      "case": "A one-sheet is a name card by definition, so clarity holds; the audience does not identify with noir, and cream plus condensed is where editorial portfolios already live.",
+      "risk": "Reads as a designer's portfolio, not an engineer's; the shadow metaphor has to be drawn well or it is a gimmick.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-noir-one-sheet-duotone-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/posters-covers-sleeves-noir-one-sheet-duotone.webp"
+    },
+    {
+      "id": "challenger-vhs",
+      "label": "VHS Rental Wall",
+      "verdict": "declined",
+      "lineage": "Friday-night video store shelves",
+      "thesis": "Projects as clamshells shelved by genre with handwritten shelf talkers.",
+      "palette": ["#0B0B0B", "#E3202B", "#2E7BE0", "#F5D33A"],
+      "materials": ["black clamshells", "lurid cover inks", "marker shelf talkers", "fluorescent light"],
+      "viewport": "Aisles of spines read sideways; pull a box to see the project.",
+      "case": "Speaks to the playful streak but not to recruiters or PIs; sideways spines hide project names and rented-out has no meaning here.",
+      "kept": "Genre aisles with a one-line shelf talker per project.",
+      "risk": "Reads as a nostalgia piece.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-vhs-rental-wall-hero.webp"
+    },
+    {
+      "id": "challenger-algorave",
+      "label": "Algorave Floor",
+      "verdict": "declined",
+      "lineage": "live-coded music performance",
+      "thesis": "The portfolio as a live code buffer edited on stage.",
+      "palette": ["#050505", "#39FF14", "#FF2BD6", "#FFB000"],
+      "materials": ["projector black", "phosphor syntax", "cursor line as downbeat"],
+      "viewport": "A monospaced buffer at stage scale, the cursor line the current role.",
+      "case": "Hackers identify, recruiters do not; phosphor on black is the dark-neon rut the redesign exists to leave.",
+      "kept": "One shared clock for every state change on the page.",
+      "risk": "Indistinguishable from the hacker-terminal portfolio template.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-algorave-source-floor-hero.webp"
+    },
+    {
+      "id": "challenger-kiln",
+      "label": "Glaze River Shelf",
+      "verdict": "declined",
+      "lineage": "kiln shelves under running glaze",
+      "thesis": "Experiences as fired samples, glaze runs frozen mid-flow.",
+      "palette": ["#F1EEE6", "#1F4FA3", "#10307A"],
+      "materials": ["chalk kiln shelf", "cobalt glaze", "fused sapphire puddles"],
+      "viewport": "A shelf row of cups, recipe cards beside each.",
+      "case": "No audience identification and no product reading; the flow metaphor has nothing to say about an engineer.",
+      "kept": "Recipe and risk visible beside every sample: stack and outcome on the card face.",
+      "risk": "Pure decoration for this product.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-glaze-river-shelf-hero.webp"
+    },
+    {
+      "id": "challenger-quarry",
+      "label": "Cloud Quarry",
+      "verdict": "declined",
+      "lineage": "surreal impossible worlds",
+      "thesis": "Sections as cut blocks of weather stacked with blue voids between.",
+      "palette": ["#F4F6F8", "#3D7BD9", "#6B7280", "#C0C4C8"],
+      "materials": ["cumulus block mass", "sky-blue voids", "silver saw line"],
+      "viewport": "Stacked cloud blocks, each a section, deep blue gaps between.",
+      "case": "Beautiful and meaningless here: neither audience identifies and it says nothing about the work.",
+      "kept": "Hard-edged sectional blocks with real gaps between screens.",
+      "risk": "Surreal for its own sake.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-cloud-quarry-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The developer portfolio this category ships, executed impeccably: name, typed roles, social icons, card grid.",
+    "palette": ["#0A0A0A", "#F5F5F5", "#6366F1"],
+    "materials": ["clean grid", "glass cards", "one accent"],
+    "viewport": "Centered name and one-line identity, social row, sections stacked below with a card grid of projects.",
+    "risk": "Indistinguishable from every other CS student portfolio by design."
+  },
+  "steer": true
+}

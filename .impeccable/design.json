@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-28T00:00:00Z",
+  "title": "Design System: Akshai Srinivasan",
+  "extensions": {
+    "themes": {
+      "default": "dark",
+      "count": 1,
+      "colorScheme": "dark",
+      "themeColorMeta": "#0f1f3d",
+      "note": "One sheet only. Every color token is a CSS custom property on :root in src/index.css; there is no data-theme attribute, no toggle, no stored preference, and no pre-paint script. Components reference var(--token)."
+    },
+    "ground": {
+      "name": "sheet-gradient",
+      "value": "linear-gradient(165deg, var(--sheet-top) 0%, var(--sheet) 50%, var(--sheet-bottom) 100%)",
+      "layer": "#root::before, position: fixed; inset: 0; z-index: -1",
+      "purpose": "The paper. One quiet fixed gradient behind the whole page; no grid, grain, or vignette over it."
+    },
+    "glass": {
+      "name": "header-glass",
+      "background": "rgba(15, 31, 61, 0.42)",
+      "backgroundFallback": "rgba(15, 31, 61, 0.78)",
+      "backdropFilter": "blur(24px)",
+      "borderBottom": "1px solid rgba(255, 255, 255, 0.06)",
+      "boxShadow": "0 8px 32px -8px rgba(0, 0, 0, 0.55), inset 0 -1px 0 0 rgba(61, 220, 132, 0.14)",
+      "purpose": "The fixed header is the one lit surface. These literal alpha colors belong to it alone and are not tokens."
+    },
+    "colorMeta": {
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Navy Sheet",
+        "canonical": "#0f1f3d",
+        "tonalRamp": ["oklch(15% 0.05 262)", "oklch(24% 0.07 262)", "oklch(35% 0.09 262)", "oklch(46% 0.1 262)", "oklch(58% 0.1 262)", "oklch(70% 0.08 262)", "oklch(83% 0.05 262)", "oklch(95% 0.015 262)"]
+      },
+      "sheet-top": {
+        "role": "neutral",
+        "displayName": "Sheet Top (gradient stop)",
+        "canonical": "#142a52",
+        "tonalRamp": ["oklch(15% 0.05 262)", "oklch(24% 0.08 262)", "oklch(35% 0.1 262)", "oklch(46% 0.11 262)", "oklch(58% 0.11 262)", "oklch(70% 0.09 262)", "oklch(83% 0.05 262)", "oklch(95% 0.015 262)"]
+      },
+      "sheet-bottom": {
+        "role": "neutral",
+        "displayName": "Sheet Bottom (gradient stop)",
+        "canonical": "#0a1630",
+        "tonalRamp": ["oklch(15% 0.05 262)", "oklch(24% 0.07 262)", "oklch(35% 0.09 262)", "oklch(46% 0.1 262)", "oklch(58% 0.1 262)", "oklch(70% 0.08 262)", "oklch(83% 0.05 262)", "oklch(95% 0.015 262)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Pale Ink",
+        "canonical": "#e6edf7",
+        "tonalRamp": ["oklch(15% 0.02 255)", "oklch(27% 0.02 255)", "oklch(38% 0.02 255)", "oklch(50% 0.02 255)", "oklch(62% 0.02 255)", "oklch(73% 0.02 255)", "oklch(85% 0.02 255)", "oklch(95% 0.01 255)"]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Pale Ink 2",
+        "canonical": "#b7c5da",
+        "tonalRamp": ["oklch(15% 0.03 255)", "oklch(27% 0.03 255)", "oklch(38% 0.03 255)", "oklch(50% 0.03 255)", "oklch(62% 0.03 255)", "oklch(73% 0.03 255)", "oklch(85% 0.03 255)", "oklch(95% 0.015 255)"]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Pale Ink 3",
+        "canonical": "#8fa2be",
+        "tonalRamp": ["oklch(15% 0.035 255)", "oklch(27% 0.035 255)", "oklch(38% 0.035 255)", "oklch(50% 0.035 255)", "oklch(62% 0.035 255)", "oklch(73% 0.035 255)", "oklch(85% 0.03 255)", "oklch(95% 0.015 255)"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Navy Rule",
+        "canonical": "#2a3d63",
+        "tonalRamp": ["oklch(15% 0.05 262)", "oklch(27% 0.07 262)", "oklch(38% 0.08 262)", "oklch(50% 0.09 262)", "oklch(62% 0.09 262)", "oklch(73% 0.07 262)", "oklch(85% 0.04 262)", "oklch(95% 0.015 262)"]
+      },
+      "rule-2": {
+        "role": "neutral",
+        "displayName": "Navy Rule 2",
+        "canonical": "#1f3154",
+        "tonalRamp": ["oklch(15% 0.05 262)", "oklch(27% 0.07 262)", "oklch(38% 0.08 262)", "oklch(50% 0.09 262)", "oklch(62% 0.09 262)", "oklch(73% 0.07 262)", "oklch(85% 0.04 262)", "oklch(95% 0.015 262)"]
+      },
+      "arm-hi": {
+        "role": "neutral",
+        "displayName": "Steel Highlight (arm only)",
+        "canonical": "#c9d2de",
+        "tonalRamp": ["oklch(15% 0.015 255)", "oklch(27% 0.015 255)", "oklch(38% 0.015 255)", "oklch(50% 0.015 255)", "oklch(62% 0.015 255)", "oklch(73% 0.015 255)", "oklch(85% 0.015 255)", "oklch(95% 0.008 255)"]
+      },
+      "arm": {
+        "role": "neutral",
+        "displayName": "Steel (arm only)",
+        "canonical": "#9aa6b6",
+        "tonalRamp": ["oklch(15% 0.015 255)", "oklch(27% 0.015 255)", "oklch(38% 0.015 255)", "oklch(50% 0.02 255)", "oklch(62% 0.02 255)", "oklch(73% 0.02 255)", "oklch(85% 0.015 255)", "oklch(95% 0.008 255)"]
+      },
+      "arm-lo": {
+        "role": "neutral",
+        "displayName": "Steel Shadow (arm only)",
+        "canonical": "#5c6879",
+        "tonalRamp": ["oklch(15% 0.015 255)", "oklch(27% 0.02 255)", "oklch(38% 0.02 255)", "oklch(50% 0.02 255)", "oklch(62% 0.02 255)", "oklch(73% 0.02 255)", "oklch(85% 0.015 255)", "oklch(95% 0.008 255)"]
+      },
+      "joint": {
+        "role": "neutral",
+        "displayName": "Joint (arm only)",
+        "canonical": "#262d3a",
+        "tonalRamp": ["oklch(15% 0.02 262)", "oklch(27% 0.025 262)", "oklch(38% 0.025 262)", "oklch(50% 0.025 262)", "oklch(62% 0.025 262)", "oklch(73% 0.02 262)", "oklch(85% 0.015 262)", "oklch(95% 0.008 262)"]
+      },
+      "arm-line": {
+        "role": "neutral",
+        "displayName": "Arm Line (arm only)",
+        "canonical": "#e6edf7",
+        "tonalRamp": ["oklch(15% 0.02 255)", "oklch(27% 0.02 255)", "oklch(38% 0.02 255)", "oklch(50% 0.02 255)", "oklch(62% 0.02 255)", "oklch(73% 0.02 255)", "oklch(85% 0.02 255)", "oklch(95% 0.01 255)"]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Mint",
+        "canonical": "#3ddc84",
+        "tonalRamp": ["oklch(15% 0.04 155)", "oklch(27% 0.08 155)", "oklch(38% 0.12 155)", "oklch(50% 0.16 155)", "oklch(62% 0.19 155)", "oklch(73% 0.2 155)", "oklch(85% 0.15 155)", "oklch(95% 0.05 155)"]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Signal Mint (text)",
+        "canonical": "#62e69c",
+        "tonalRamp": ["oklch(15% 0.04 155)", "oklch(27% 0.08 155)", "oklch(38% 0.12 155)", "oklch(50% 0.16 155)", "oklch(62% 0.18 155)", "oklch(73% 0.19 155)", "oklch(85% 0.14 155)", "oklch(95% 0.05 155)"]
+      },
+      "on-signal": {
+        "role": "primary",
+        "displayName": "On Signal (navy)",
+        "canonical": "#0b1424",
+        "tonalRamp": ["oklch(15% 0.04 262)", "oklch(27% 0.06 262)", "oklch(38% 0.08 262)", "oklch(50% 0.1 262)", "oklch(62% 0.1 262)", "oklch(73% 0.08 262)", "oklch(85% 0.05 262)", "oklch(95% 0.02 262)"]
+      },
+      "scrim": {
+        "role": "neutral",
+        "displayName": "Navy Scrim",
+        "canonical": "rgba(4, 10, 24, 0.66)",
+        "tonalRamp": ["oklch(15% 0.04 262 / 0.66)", "oklch(27% 0.06 262 / 0.66)", "oklch(38% 0.08 262 / 0.66)", "oklch(50% 0.1 262 / 0.66)", "oklch(62% 0.1 262 / 0.66)", "oklch(73% 0.08 262 / 0.66)", "oklch(85% 0.05 262 / 0.66)", "oklch(95% 0.02 262 / 0.66)"]
+      },
+      "axis-x": {
+        "role": "tertiary",
+        "displayName": "Axis X (arm only)",
+        "canonical": "#ff5c5c",
+        "tonalRamp": ["oklch(15% 0.06 25)", "oklch(27% 0.1 25)", "oklch(38% 0.15 25)", "oklch(50% 0.2 25)", "oklch(62% 0.22 25)", "oklch(73% 0.18 25)", "oklch(85% 0.09 25)", "oklch(95% 0.03 25)"]
+      },
+      "axis-y": {
+        "role": "tertiary",
+        "displayName": "Axis Y (arm only)",
+        "canonical": "#3ddc84",
+        "tonalRamp": ["oklch(15% 0.04 155)", "oklch(27% 0.08 155)", "oklch(38% 0.12 155)", "oklch(50% 0.16 155)", "oklch(62% 0.19 155)", "oklch(73% 0.2 155)", "oklch(85% 0.15 155)", "oklch(95% 0.05 155)"]
+      },
+      "axis-z": {
+        "role": "tertiary",
+        "displayName": "Axis Z (arm only)",
+        "canonical": "#7fb2ff",
+        "tonalRamp": ["oklch(15% 0.06 262)", "oklch(27% 0.1 262)", "oklch(38% 0.15 262)", "oklch(50% 0.19 262)", "oklch(62% 0.18 262)", "oklch(73% 0.15 262)", "oklch(85% 0.08 262)", "oklch(95% 0.02 262)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The hero name only, two lines, with an aria-hidden duplicate offset 0.06em carrying a 1.5px Signal text stroke at 55% opacity. min(5.2rem, 21vw) on phones. Big Shoulders Display 900 appears nowhere else." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings on a 1px Ink underline; 2rem on phones. The detail overlay title is the mixed-case sibling at 2rem / 1.75rem, line-height 1.25." },
+      "title": { "displayName": "Title", "purpose": "Experience company names (1.2 to 1.3rem) and project titles (1.15rem); Signal Ink on hover." },
+      "group": { "displayName": "Group", "purpose": "Skill category headings in Ink 2 on a 1px Rule underline; same size and case as the header wordmark and phone menu items." },
+      "positions": { "displayName": "Positions", "purpose": "The hero's one line of current positions in Ink 2 at weight 500 (1.1rem on phones), separated by Signal ⫽ glyphs at 1.35em." },
+      "body": { "displayName": "Body", "purpose": "Prose, ledes, descriptions, overlay bullets; 66ch measure; 1.625 line-height in About and row summaries. Chips and skill captions are 0.85rem in Ink 2." },
+      "label": { "displayName": "Label", "purpose": "The STACK label in the overlay, Ink 3. Effective tracking is .font-cad's 0.02em; the tracking-widest utility on it is overridden." },
+      "action": { "displayName": "Action", "purpose": "Header nav links (768 to 1024px), the header RESUME button, and the wordmark's siblings: Bricolage 600 uppercase at 0.95rem, 0.02em." },
+      "rail-label": { "displayName": "Rail Label", "purpose": "The six station labels beside the arm on desktop: clamp(0.75rem, 1.05vw, 0.95rem)." },
+      "meta": { "displayName": "Meta", "purpose": "Dates, locations, the footer colophon, overlay meta lines, in JetBrains Mono with tabular numerals." }
+    },
+    "fonts": [
+      { "family": "Bricolage Grotesque", "source": "Google Fonts", "axes": "opsz 12..96, wght 400/500/600/700", "used": "400 prose, 500 hero positions, 600 .font-cad; 700 unused" },
+      { "family": "JetBrains Mono", "source": "Google Fonts", "axes": "wght 400/500", "used": "400 with tnum; 500 unused" },
+      { "family": "Big Shoulders Display", "source": "Google Fonts", "axes": "wght 800/900", "used": "900 hero name; 800 unused" },
+      { "family": "osifont", "source": "self-hosted src/assets/fonts/osifont.ttf, font-display: swap", "axes": "400", "used": "SVG <text> only: arm dimensions (15 units) and flange callouts (13 units)" }
+    ],
+    "shadows": [
+      { "name": "header-glass", "value": "0 8px 32px -8px rgba(0, 0, 0, 0.55), inset 0 -1px 0 0 rgba(61, 220, 132, 0.14)", "purpose": "The fixed header only, over backdrop-filter: blur(24px). No other surface declares a shadow." }
+    ],
+    "scrims": [
+      { "name": "overlay-scrim", "value": "var(--scrim)", "purpose": "Backdrop behind the detail overlay; rgba(4, 10, 24, 0.66). The only layering device besides the header glass." }
+    ],
+    "gradients": [
+      { "name": "sheet-gradient", "value": "linear-gradient(165deg, var(--sheet-top) 0%, var(--sheet) 50%, var(--sheet-bottom) 100%)", "purpose": "The ground, fixed behind the page on #root::before. Not depth; the paper itself." },
+      { "name": "link-shading", "value": "linearGradient #link, vertical: var(--arm-hi) 0, var(--arm) 0.55, var(--arm-lo) 1", "purpose": "Cylindrical shading on every arm link (pedestal, upper arm, forearm, wrist link). Arm only; the only other gradient in the system." }
+    ],
+    "borders": [
+      { "name": "hairline", "value": "1px solid var(--rule)", "purpose": "Soft separation: row dividers, group underlines, the phone arm band, icon-cell, skill-cell, hero icon-link, chip, and close-button frames, the aside and mobile-menu edges, the overlay's inner dividers, the footer colophon rule." },
+      { "name": "ink-edge", "value": "1px solid var(--ink)", "purpose": "Hard edge: section heading underline, photo frame, outline buttons, overlay panel, a hovered card image." },
+      { "name": "mint-rule", "value": "2px solid var(--signal), width 88%", "purpose": "The rule under the hero name only; the heaviest stroke on the sheet after the arm's outlines." },
+      { "name": "signal-outline", "value": "1px solid var(--signal)", "purpose": "The header RESUME button at rest, hero icon links and skill cells on hover." },
+      { "name": "arm-outline", "value": "stroke: var(--arm-line); stroke-width: 2 (viewBox units); stroke-linejoin: round", "purpose": "Outline on every part of the arm SVG so parts read as separate machined pieces. Arm only." },
+      { "name": "hollow-name", "value": "-webkit-text-stroke: 1.5px var(--signal); color: transparent; opacity: 0.55; offset 0.06em", "purpose": "The duplicate behind the hero name. Hero only." }
+    ],
+    "motion": [
+      { "name": "arm-vmax", "value": "95deg/s", "purpose": "Cruise velocity of each of the arm's seven joints (six axes plus the gripper) on its trapezoidal velocity profile." },
+      { "name": "arm-amax", "value": "220deg/s^2", "purpose": "Acceleration and deceleration limit of each arm joint; no easing curve, bounce, or overshoot." },
+      { "name": "arm-aim", "value": "wrist pitch solved analytically toward the aimed station on the rail (x 686, y 110..570), clamped to ±110°", "purpose": "The gripper points at the active section's station below the hero, or at any hovered or focused label, which also previews that section's pose." },
+      { "name": "arm-grip", "value": "0 to 30 on the same profile; each finger spreads 10 viewBox units", "purpose": "Seventh joint: the claw opens whenever the arm aims at a station and closes when it returns to the hero pose. Snaps with no animation, before first paint, under prefers-reduced-motion." },
+      { "name": "bob", "value": "translateY(0) to translateY(7px) and back, 2.1s ease-in-out infinite, motion-safe only", "purpose": "The hero chevron's cue toward About." },
+      { "name": "hover-color", "value": "transition: color, background-color, border-color 150ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Hero icon links and the header RESUME button." },
+      { "name": "skill-lift", "value": "transition: all 200ms ease-out; translateY(-4px); border-color to var(--signal); caption color 200ms to var(--signal-ink)", "purpose": "Skill cell hover; the only hover transform in the system." },
+      { "name": "overlay-root-fade", "value": "160ms linear", "purpose": "Fade of the overlay root and scrim on open and close." },
+      { "name": "overlay-panel", "value": "180ms cubic-bezier(0.2, 0, 0, 1), translateY(14px) to 0", "purpose": "Panel fade-and-rise on open; the rise is dropped under prefers-reduced-motion." },
+      { "name": "instant", "value": "none", "purpose": "Text-link hovers, outline buttons, the close button, and the rail switch color instantly; no transition is declared." },
+      { "name": "scroll", "value": "scroll-behavior: smooth (auto under prefers-reduced-motion)", "purpose": "In-page navigation from the header, the rail labels, and the hero chevron." }
+    ],
+    "focus": [
+      { "name": "focus-visible", "value": "outline: 2px solid var(--signal); outline-offset: 3px", "purpose": "Global keyboard focus ring." }
+    ],
+    "selection": [
+      { "name": "selection", "value": "background: var(--signal); color: var(--on-signal)", "purpose": "Text selection." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Resume Button",
+      "kind": "button",
+      "refersTo": "button-resume",
+      "description": "The one action in the desktop header: mint-outlined, 12px radius, Signal Ink uppercase label with a 16px arrow; fills Signal with On Signal text on hover over 150ms.",
+      "html": "<a class=\"ds-btn-resume\" href=\"#\">Resume<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
+      "css": ".ds-btn-resume { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; color: var(--signal-ink, #62e69c); background: transparent; border: 1px solid var(--signal, #3ddc84); border-radius: 12px; text-decoration: none; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-resume:hover { background: var(--signal, #3ddc84); color: var(--on-signal, #0b1424); } .ds-btn-resume:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Hero Icon Link",
+      "kind": "button",
+      "refersTo": "icon-link",
+      "description": "48px (56px from 640px) hairline-bordered square with a 12px radius holding a 22/26px line icon; border turns Signal and icon Signal Ink on hover over 150ms. Four sit in a row under the hero positions.",
+      "html": "<nav class=\"ds-icon-row\" aria-label=\"Contact\"><a class=\"ds-icon-link\" href=\"#\" aria-label=\"Email\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/></svg></a><a class=\"ds-icon-link\" href=\"#\" aria-label=\"GitHub\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4\"/><path d=\"M9 18c-4.51 2-5-2-7-2\"/></svg></a><a class=\"ds-icon-link\" href=\"#\" aria-label=\"LinkedIn\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"/><rect width=\"4\" height=\"12\" x=\"2\" y=\"9\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/></svg></a><a class=\"ds-icon-link\" href=\"#\" aria-label=\"Resume (PDF)\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/><path d=\"M10 9H8\"/><path d=\"M16 13H8\"/><path d=\"M16 17H8\"/></svg></a></nav>",
+      "css": ".ds-icon-row { display: flex; align-items: center; gap: 32px; } .ds-icon-link { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; color: var(--ink, #e6edf7); border: 1px solid var(--rule, #2a3d63); border-radius: 12px; text-decoration: none; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-icon-link:hover { color: var(--signal-ink, #62e69c); border-color: var(--signal, #3ddc84); } .ds-icon-link:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "1px Ink-bordered link in the body face with an optional leading line icon; used for overlay project links and the 404 return link. Inverts to Ink instantly.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M10 14 21 3\"/><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\"/></svg><span>Website</span></a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 0.95rem; font-weight: 400; color: var(--ink, #e6edf7); background: var(--sheet, #0f1f3d); border: 1px solid var(--ink, #e6edf7); border-radius: 0; text-decoration: none; } .ds-btn-outline:hover { background: var(--ink, #e6edf7); color: var(--sheet, #0f1f3d); } .ds-btn-outline:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Close Button",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "40px hairline-bordered square in the detail overlay's corner with a 20px X at 1.75 stroke; border goes Ink and fill goes Rule 2 on hover. The phone menu toggle is the same square without a border.",
+      "html": "<button class=\"ds-close\" type=\"button\" aria-label=\"Close\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button>",
+      "css": ".ds-close { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; background: none; color: var(--ink, #e6edf7); border: 1px solid var(--rule, #2a3d63); border-radius: 0; cursor: pointer; } .ds-close:hover { border-color: var(--ink, #e6edf7); background: var(--rule-2, #1f3154); } .ds-close:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Stack Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Static hairline-bordered technology name under the STACK label in the detail overlay.",
+      "html": "<div class=\"ds-stack\"><h3 class=\"ds-stack-label\">Stack</h3><ul class=\"ds-chips\"><li class=\"ds-chip\">Python</li><li class=\"ds-chip\">PyTorch</li><li class=\"ds-chip\">Isaac Lab</li></ul></div>",
+      "css": ".ds-stack-label { margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink-3, #8fa2be); } .ds-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 0; padding: 0; list-style: none; } .ds-chip { padding: 4px 10px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 0.85rem; color: var(--ink-2, #b7c5da); border: 1px solid var(--rule, #2a3d63); border-radius: 0; }"
+    },
+    {
+      "name": "Skill Cell",
+      "kind": "custom",
+      "refersTo": "skill-cell",
+      "description": "64px hairline cell with a 12px radius and no fill holding a 36px logo, with an Ink 2 caption; on hover the cell lifts 4px and its border turns Signal while the caption turns Signal Ink, over 200ms ease-out.",
+      "html": "<div class=\"ds-skill\"><span class=\"ds-skill-cell\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\"/><path d=\"M4 12h16M12 4v16\"/></svg></span><span class=\"ds-skill-name\">Python</span></div>",
+      "css": ".ds-skill { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; color: var(--ink, #e6edf7); } .ds-skill-cell { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border: 1px solid var(--rule, #2a3d63); border-radius: 12px; transition: all 200ms ease-out; } .ds-skill:hover .ds-skill-cell { transform: translateY(-4px); border-color: var(--signal, #3ddc84); } .ds-skill-name { font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 0.85rem; line-height: 1.25; color: var(--ink-2, #b7c5da); transition: color 200ms ease-out; } .ds-skill:hover .ds-skill-name { color: var(--signal-ink, #62e69c); }"
+    },
+    {
+      "name": "Glass Header",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "The fixed 56px header: translucent navy over a 24px blur, a faint white hairline, a soft drop shadow, and an inset mint hairline. Wordmark at left; between 768px and 1024px the six uppercase links (active in Signal Ink with a 1px underline offset 6px); from 1024px the RESUME button instead.",
+      "html": "<header class=\"ds-header\"><button class=\"ds-wordmark\" type=\"button\">Akshai Srinivasan</button><nav class=\"ds-nav\" aria-label=\"Primary\"><a class=\"ds-nav-link\" href=\"#\">About</a><a class=\"ds-nav-link ds-nav-link-active\" href=\"#\" aria-current=\"location\">Experience</a><a class=\"ds-nav-link\" href=\"#\">Projects</a><a class=\"ds-nav-link\" href=\"#\">Skills</a><a class=\"ds-nav-link\" href=\"#\">Resume</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; height: 56px; padding: 0 32px; background: rgba(15, 31, 61, 0.42); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255, 255, 255, 0.06); box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.55), inset 0 -1px 0 0 rgba(61, 220, 132, 0.14); } .ds-wordmark { font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.05rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink, #e6edf7); background: none; border: 0; padding: 0; cursor: pointer; } .ds-wordmark:hover { color: var(--signal-ink, #62e69c); } .ds-nav { display: flex; align-items: center; gap: 28px; } .ds-nav-link { font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink, #e6edf7); text-decoration: none; background: none; border: 0; padding: 0; cursor: pointer; } .ds-nav-link:hover { color: var(--signal-ink, #62e69c); } .ds-nav-link-active { color: var(--signal-ink, #62e69c); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; } .ds-nav-link:focus-visible, .ds-wordmark:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Station Rail",
+      "kind": "nav",
+      "refersTo": "rail-label",
+      "description": "Desktop-only rail beside the arm: an Ink 3 hairline with end ticks, six 6-unit station circles 92 apart, and plain uppercase labels. The active station is filled Signal and its label is Signal Ink; a hovered station gets a Signal crosshair. The arm's gripper aims at and opens on the aimed station.",
+      "html": "<div class=\"ds-rail\"><svg class=\"ds-rail-svg\" viewBox=\"660 60 120 200\" aria-hidden=\"true\"><line x1=\"686\" y1=\"76\" x2=\"686\" y2=\"244\" stroke=\"var(--ink-3, #8fa2be)\" stroke-width=\"1\"/><line x1=\"678\" y1=\"76\" x2=\"694\" y2=\"76\" stroke=\"var(--ink-3, #8fa2be)\" stroke-width=\"1\"/><line x1=\"678\" y1=\"244\" x2=\"694\" y2=\"244\" stroke=\"var(--ink-3, #8fa2be)\" stroke-width=\"1\"/><circle cx=\"686\" cy=\"110\" r=\"6\" fill=\"var(--sheet, #0f1f3d)\" stroke=\"var(--ink, #e6edf7)\" stroke-width=\"1.5\"/><circle cx=\"686\" cy=\"160\" r=\"6\" fill=\"var(--signal, #3ddc84)\" stroke=\"var(--signal, #3ddc84)\" stroke-width=\"1.5\"/><g stroke=\"var(--signal, #3ddc84)\" stroke-width=\"1\"><line x1=\"670\" y1=\"210\" x2=\"702\" y2=\"210\"/><line x1=\"686\" y1=\"194\" x2=\"686\" y2=\"226\"/></g><circle cx=\"686\" cy=\"210\" r=\"6\" fill=\"var(--sheet, #0f1f3d)\" stroke=\"var(--ink, #e6edf7)\" stroke-width=\"1.5\"/></svg><ul class=\"ds-stations\"><li style=\"top: 25%\"><button class=\"ds-station\" type=\"button\">About</button></li><li style=\"top: 50%\"><button class=\"ds-station ds-station-active\" type=\"button\" aria-current=\"location\">Experience</button></li><li style=\"top: 75%\"><button class=\"ds-station ds-station-hover\" type=\"button\">Projects</button></li></ul></div>",
+      "css": ".ds-rail { position: relative; width: 240px; height: 200px; } .ds-rail-svg { position: absolute; left: 0; top: 0; width: 120px; height: 200px; overflow: visible; } .ds-stations { margin: 0; padding: 0; list-style: none; } .ds-stations li { position: absolute; left: 52px; transform: translateY(-50%); } .ds-station { display: inline-flex; align-items: baseline; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: clamp(0.75rem, 1.05vw, 0.95rem); font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap; color: var(--ink, #e6edf7); background: none; border: 0; padding: 0; cursor: pointer; } .ds-station:hover, .ds-station-hover, .ds-station-active { color: var(--signal-ink, #62e69c); } .ds-station:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Uppercase Bricolage 600 heading on a 1px Ink underline with an optional Ink 2 lede within the 66ch measure; opens every section.",
+      "html": "<div class=\"ds-section-heading\"><h2 class=\"ds-section-title\">Experience</h2><p class=\"ds-section-lede\">My internship/work experience and other notable opportunities I've participated in! Click on any tile for more information!</p></div>",
+      "css": ".ds-section-heading { padding-bottom: 16px; margin-bottom: 40px; border-bottom: 1px solid var(--ink, #e6edf7); } .ds-section-title { margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 2.4rem; font-weight: 600; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink, #e6edf7); } .ds-section-lede { max-width: 66ch; margin: 16px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 17px; line-height: 1.55; color: var(--ink-2, #b7c5da); }"
+    },
+    {
+      "name": "Hero",
+      "kind": "card",
+      "refersTo": "display",
+      "description": "The first viewport's right column: two-line Display name with a hollow Signal duplicate, a 2px mint rule, the positions line with Signal ⫽ separators, four rounded icon links, and a bobbing Signal chevron under the resume icon.",
+      "html": "<section class=\"ds-hero\"><h1 class=\"ds-hero-name\"><span class=\"ds-hero-ghost\" aria-hidden=\"true\">Akshai<br>Srinivasan</span><span class=\"ds-hero-solid\">Akshai<br>Srinivasan</span></h1><div class=\"ds-hero-rule\" aria-hidden=\"true\"></div><p class=\"ds-positions\"><span>SWE Intern @ GM Cruise</span><span><span class=\"ds-sep\" aria-hidden=\"true\">⫽</span>CE + AMATH @ UW</span><span><span class=\"ds-sep\" aria-hidden=\"true\">⫽</span>Director of Technology @ DubHacks</span></p><nav class=\"ds-icon-row\" aria-label=\"Contact\"><a class=\"ds-icon-link\" href=\"#\" aria-label=\"Email\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/></svg></a><a class=\"ds-icon-link\" href=\"#\" aria-label=\"GitHub\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4\"/><path d=\"M9 18c-4.51 2-5-2-7-2\"/></svg></a><a class=\"ds-icon-link\" href=\"#\" aria-label=\"LinkedIn\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\"/><rect width=\"4\" height=\"12\" x=\"2\" y=\"9\"/><circle cx=\"4\" cy=\"4\" r=\"2\"/></svg></a><a class=\"ds-icon-link\" href=\"#\" aria-label=\"Resume (PDF)\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/><path d=\"M10 9H8\"/><path d=\"M16 13H8\"/><path d=\"M16 17H8\"/></svg></a></nav><div class=\"ds-cue-row\"><a class=\"ds-cue\" href=\"#about\" aria-label=\"Scroll to About\"><svg width=\"48\" height=\"48\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></a></div></section>",
+      "css": ".ds-hero { padding: 96px 32px 40px 48px; color: var(--ink, #e6edf7); background: var(--sheet, #0f1f3d); } .ds-hero-name { position: relative; width: fit-content; margin: 0; font-family: 'Big Shoulders Display', Impact, sans-serif; font-size: clamp(3.4rem, 10vw, 8.75rem); font-weight: 900; line-height: 0.86; text-transform: uppercase; letter-spacing: -0.025em; } .ds-hero-ghost { position: absolute; left: 0.06em; top: 0.06em; color: transparent; -webkit-text-stroke: 1.5px var(--signal, #3ddc84); opacity: 0.55; user-select: none; } .ds-hero-solid { position: relative; } .ds-hero-rule { width: 88%; height: 2px; margin-top: 32px; background: var(--signal, #3ddc84); } .ds-positions { display: flex; flex-wrap: wrap; align-items: baseline; row-gap: 12px; margin: 28px 0 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.22rem; font-weight: 500; line-height: 1.625; color: var(--ink-2, #b7c5da); } .ds-positions > span { white-space: nowrap; } .ds-sep { margin: 0 10px; font-size: 1.35em; color: var(--signal, #3ddc84); } .ds-icon-row { display: flex; align-items: center; gap: 32px; margin-top: 24px; } .ds-icon-link { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; color: var(--ink, #e6edf7); border: 1px solid var(--rule, #2a3d63); border-radius: 12px; text-decoration: none; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-icon-link:hover { color: var(--signal-ink, #62e69c); border-color: var(--signal, #3ddc84); } .ds-cue-row { display: flex; justify-content: flex-end; width: 23rem; margin-top: 40px; } .ds-cue { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; color: var(--signal, #3ddc84); } .ds-cue:hover { color: var(--signal-ink, #62e69c); } @keyframes ds-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } } @media (prefers-reduced-motion: no-preference) { .ds-cue { animation: ds-bob 2.1s ease-in-out infinite; } } .ds-icon-link:focus-visible, .ds-cue:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Experience Row",
+      "kind": "card",
+      "refersTo": "title-row",
+      "description": "Full-width button row on a hairline divider: a rounded 72px logo box with no border or fill, company in Bricolage 600, role, mono date line, and summary. No CURRENT tag, no metric.",
+      "html": "<button class=\"ds-row\" type=\"button\" aria-haspopup=\"dialog\"><span class=\"ds-row-logo\"><svg width=\"48\" height=\"48\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"8\"/></svg></span><span class=\"ds-row-body\"><span class=\"ds-row-company\">DubHacks</span><span class=\"ds-row-role\">Director of Technology</span><span class=\"ds-row-meta\">Jan 2025 – Present · Seattle, WA</span><span class=\"ds-row-summary\">Full-stack infrastructure for the largest collegiate hackathon in the PNW</span></span></button>",
+      "css": ".ds-row { display: grid; grid-template-columns: 72px 1fr; column-gap: 20px; row-gap: 4px; width: 100%; padding: 24px 0; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--rule, #2a3d63); border-radius: 0; cursor: pointer; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 17px; line-height: 1.55; color: var(--ink, #e6edf7); } .ds-row-logo { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; overflow: hidden; border-radius: 12px; } .ds-row-body { min-width: 0; display: block; } .ds-row-company { display: block; font-size: 1.3rem; font-weight: 600; line-height: 1.25; letter-spacing: 0.02em; } .ds-row:hover .ds-row-company { color: var(--signal-ink, #62e69c); } .ds-row-role { display: block; margin-top: 2px; color: var(--ink-2, #b7c5da); } .ds-row-meta { display: block; margin-top: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.8rem; font-variant-numeric: tabular-nums; color: var(--ink-3, #8fa2be); } .ds-row-summary { display: block; max-width: 66ch; margin-top: 12px; font-size: 0.95rem; line-height: 1.625; color: var(--ink-2, #b7c5da); } .ds-row:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "title-card",
+      "description": "Unbordered button-column in a flat two-column grid: 16:9 screenshot in a hairline frame (Ink on hover), Bricolage 600 title (Signal Ink on hover), one-liner, and a row of 32px hairline icon cells with no fill.",
+      "html": "<button class=\"ds-card\" type=\"button\" aria-haspopup=\"dialog\"><span class=\"ds-card-media\"></span><span class=\"ds-card-title\">DuckRL</span><span class=\"ds-card-desc\">Robust reinforcement learning locomotion for Disney BDX droids</span><span class=\"ds-card-icons\"><span class=\"ds-card-icon\"></span><span class=\"ds-card-icon\"></span><span class=\"ds-card-icon\"></span></span></button>",
+      "css": ".ds-card { display: flex; flex-direction: column; width: 100%; max-width: 20rem; padding: 0; text-align: left; background: none; border: 0; border-radius: 0; cursor: pointer; } .ds-card-media { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--rule, #2a3d63); } .ds-card:hover .ds-card-media { border-color: var(--ink, #e6edf7); } .ds-card-title { margin-top: 12px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.15rem; font-weight: 600; line-height: 1.25; letter-spacing: 0.02em; color: var(--ink, #e6edf7); } .ds-card:hover .ds-card-title { color: var(--signal-ink, #62e69c); } .ds-card-desc { display: block; margin-top: 4px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 0.95rem; line-height: 1.375; color: var(--ink-2, #b7c5da); } .ds-card-icons { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; } .ds-card-icon { width: 32px; height: 32px; border: 1px solid var(--rule, #2a3d63); } .ds-card:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; }"
+    },
+    {
+      "name": "Detail Sheet",
+      "kind": "custom",
+      "refersTo": "detail-sheet",
+      "description": "The one overlay: Scrim backdrop, 1px Ink-bordered Sheet panel (max 48rem), close button top-right, Bricolage 600 title, hairline divider, square-bulleted list, then the STACK chips.",
+      "html": "<div class=\"ds-sheet-root\"><div class=\"ds-sheet\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"ds-sheet-title\"><button class=\"ds-sheet-close\" type=\"button\" aria-label=\"Close\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button><header class=\"ds-sheet-head\"><h2 class=\"ds-sheet-title\" id=\"ds-sheet-title\">General Motors: Cruise</h2><p class=\"ds-sheet-sub\">Software Engineering Intern</p><p class=\"ds-sheet-meta\">June 2026 – Present · Sunnyvale, CA</p></header><div class=\"ds-sheet-body\"><ul class=\"ds-bullets\"><li><span class=\"ds-bullet\"></span><span>Developing autonomous vehicle infrastructure for a web-based platform visualizing multi-source ROS data streams.</span></li><li><span class=\"ds-bullet\"></span><span>Accelerating machine learning workflows by optimizing spatial data rendering tools.</span></li></ul></div></div></div>",
+      "css": ".ds-sheet-root { display: flex; align-items: center; justify-content: center; padding: 24px; background: var(--scrim, rgba(4, 10, 24, 0.66)); } .ds-sheet { position: relative; width: 100%; max-width: 48rem; padding: 36px; background: var(--sheet, #0f1f3d); border: 1px solid var(--ink, #e6edf7); border-radius: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 17px; line-height: 1.55; color: var(--ink, #e6edf7); } .ds-sheet-close { position: absolute; top: 24px; right: 24px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: none; border: 1px solid var(--rule, #2a3d63); border-radius: 0; color: var(--ink, #e6edf7); cursor: pointer; } .ds-sheet-close:hover { border-color: var(--ink, #e6edf7); background: var(--rule-2, #1f3154); } .ds-sheet-close:focus-visible { outline: 2px solid var(--signal, #3ddc84); outline-offset: 3px; } .ds-sheet-head { padding-right: 48px; } .ds-sheet-title { margin: 0; font-size: 2rem; font-weight: 600; line-height: 1.25; letter-spacing: 0.02em; } .ds-sheet-sub { margin: 4px 0 0; color: var(--ink-2, #b7c5da); } .ds-sheet-meta { margin: 4px 0 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.8rem; font-variant-numeric: tabular-nums; color: var(--ink-3, #8fa2be); } .ds-sheet-body { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule, #2a3d63); } .ds-bullets { max-width: 66ch; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; } .ds-bullets li { display: flex; gap: 12px; } .ds-bullet { flex: none; width: 6px; height: 6px; margin-top: 0.7em; background: var(--ink, #e6edf7); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Kinematic Blueprint",
+    "overview": "The whole site is one navy drawing sheet. The ground is a single quiet gradient fixed behind the page (a slightly lighter navy at the top-left falling to a deeper navy at the bottom-right) with no grid, no grain, and no vignette; pale ink sits on it in hairline rules. On the sheet's left 39% stands a single six-axis robot arm drawn as a machined object in two tones: the links are shaded steel (a vertical gradient from a pale highlight through mid-steel to a dark underside) and the base plate, housings, collar, flange plate, fingers, and turntable are a near-black joint tone, with every part carrying its own pale 2-unit outline so adjacent pieces stay distinct where they overlap. The arm articulates with real forward kinematics as the visitor scrolls: each section of the page is a pose, and the gripper aims at that section's station on a vertical rail of six plain labels beside the drawing, opening its claw whenever it aims. The one signal color, a mint green, fills the active station and colors the active label; no part of the arm ever takes it.\n\nThe right 61% opens with the name at poster scale in a heavy industrial display face, set in two lines with a hollow mint duplicate offset behind it, then a short 2px mint rule, the three current positions on one line separated by mint ⫽ glyphs, four hairline-framed icon links (email, GitHub, LinkedIn, resume), and a mint chevron that bobs toward the About section. A faint flange section detail sits behind the name at 9% opacity as the drawing's own background layer. That arm, its rail, and the hero are the entire metaphor. Every section after the first viewport is plain, well-structured content that borrows the sheet's materials (hairline rules, one grotesk in three weights, a mono face for figures) and nothing else. On phones the drawing moves under the hero into a bordered band, cropped to its hero pose, and the header menu carries navigation.\n\nThe world is flat with one lit exception. The fixed header is a glossy bar: translucent navy over a 24px backdrop blur, a faint white hairline below, a soft black drop shadow, and an inset mint hairline; nothing else on the sheet casts a shadow, blurs, or glows. Corners are square except on the four kinds of touchable cell (hero icon links, the header's RESUME button, logo boxes, skill cells), which take a 12px radius. The only two gradients are the ground and the link shading, and depth elsewhere is conveyed by ink borders of two weights and by the one dimmed scrim behind the detail overlay. Color is ink on the sheet with the signal used as a pointer (current section, hover, the hero's rule, separators, and chevron, the resume outline) rather than as a mood. The red/green/blue joint-frame triads exist only on the arm as functional CAD code. Logos, screenshots, and skill icons sit directly on the sheet with no white tile behind them. The build refuses the glowing hero, gradient text, glass cards, eyebrows and kickers, and any repetition of the drawing conceit in section chrome (no parts list, no DETAIL sheet, no legend, no NOTES block, no robot puns). It refuses an orange or yellow accent, a blueprint-blue or textured ground, and a second theme: the light sheet and its toggle were built, reviewed, and removed. Motion is sparse: the arm's trapezoidal velocity profile, the chevron's bob, the overlay's open and close, a 4px lift on skill cells, and 150 to 200ms color transitions on the hover cells.",
+    "keyCharacteristics": [
+      "One sheet: navy ground on a plain fixed gradient, pale ink, mint signal; color-scheme: dark, no theme toggle, no stored preference",
+      "A two-tone arm: gradient-shaded steel links and near-black joint housings on a 180-wide base plate, every part outlined in pale ink at 2 viewBox units, standing on a full-width hatched ground line",
+      "Big Shoulders Display at weight 900 for the hero name only; Bricolage Grotesque for everything else (600 for headings, labels, actions, and nav; 500 for the hero positions; 400 for prose); JetBrains Mono with tabular figures for dates, locations, and the colophon; osifont only for dimension numerals inside the SVG drawings",
+      "Square corners by default with a 12px radius reserved for touchable cells; hairline borders instead of tiles; the header is the one lit, glassy surface",
+      "Two-column desktop sheet (39% sticky arm with a six-station rail, 61% scrolling content); single stacked column on phones with the cropped arm in a band under the hero and no rail",
+      "Exactly one signal: it marks what is current, hovered, or actionable and appears nowhere else; it is never orange or yellow"
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "The signal means \"current\", \"hovered\", or \"act here\" and nothing else. It marks the active section (header link, rail label, and rail station), the hover state of links, icon cells, and skill cells, the hero's rule, separators, and chevron, and the one RESUME action. It never colors a part of the arm. It is never a background for content and never decoration.", "section": "colors" },
+      { "name": "The Signal-Reads-As-Ink Rule", "body": "Typeset words in the signal color always use signal-ink; the base signal is reserved for fills (the hero rule, the active station, the hovered RESUME button, selection), strokes (the crosshair, the hollow name, borders, the focus ring), and glyph marks that are not words (the ⫽ separators, the chevron).", "section": "colors" },
+      { "name": "The Navy-Not-Blueprint Rule", "body": "The sheet is a deep navy, never a saturated blueprint or Prussian blue and never a pale blue, and the ground is a plain gradient with no texture. The signal is mint; it is never orange and never yellow. All of these were tried and rejected by the owner.", "section": "colors" },
+      { "name": "The Two-Tone Steel Rule", "body": "The arm is never blue on the blue sheet. Links are gradient-shaded steel, housings and tool parts are the dark Joint tone, and every part carries its own arm-line outline so pieces read as separate machined parts where they overlap.", "section": "colors" },
+      { "name": "The Bare-Raster Rule", "body": "Logos, screenshots, and technology icons sit directly on the sheet. There is no white tile and no frame token: a screenshot or icon cell gets a 1px Rule hairline, a company logo box gets a 12px radius and no border at all, and dark-on-transparent icons are inverted to read on navy.", "section": "colors" },
+      { "name": "The Triads-Stay-On-The-Arm Rule", "body": "The red/green/blue axis colors are drawn only inside the arm SVG. They are not available to any other component.", "section": "colors" },
+      { "name": "The One Display Rule", "body": "Big Shoulders Display is the hero name and nothing else. Below the name there is one family, and weight is a hierarchy step: 600 names, labels, and acts; 500 is the hero positions line only; 400 reads. Bricolage's 700, JetBrains Mono's 500, and Big Shoulders' 800 are loaded but unused.", "section": "typography" },
+      { "name": "The Drawing-Font Rule", "body": "osifont is drawing lettering: it appears only as <text> inside an SVG (dimension numerals, flange callouts). It never sets an HTML element.", "section": "typography" },
+      { "name": "The Tabular Figures Rule", "body": "Every date, location line, and colophon is set in JetBrains Mono with font-variant-numeric: tabular-nums (the .tnum utility).", "section": "typography" },
+      { "name": "The One-Glass Rule", "body": "The header is the only surface that is translucent, blurred, or shadowed. Every other surface is opaque Sheet with a drawn edge; if a new surface needs to separate from the sheet, give it a 1px Ink edge; if it needs to sit above the sheet, dim what is behind it with the Scrim token.", "section": "elevation" },
+      { "name": "The Mint-Rule Rule", "body": "The 2px stroke belongs to the hero's mint rule alone; every other border on the sheet is 1px.", "section": "elevation" },
+      { "name": "The Two-Gradients Rule", "body": "The ground gradient and the link shading are the only gradients in the system. No surface, text, or control takes a gradient, and the ground takes no texture.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do build every surface on the one navy sheet using only the token names (sheet, ink, rule, signal, on-signal, scrim); there is no second theme to support and no hex belongs in a component.",
+      "Do set the name, and only the name, in Big Shoulders Display at weight 900 with its hollow Signal duplicate; set every heading, label, action, and nav item in Bricolage Grotesque at weight 600 with 0.02em tracking (.font-cad) and uppercase where it labels, using size for hierarchy.",
+      "Do keep prose in Bricolage Grotesque at 17px / 1.55 within a 66ch measure, and set every date, location, or colophon in JetBrains Mono with tabular numerals.",
+      "Do use Signal Ink for signal-colored words, Signal for fills, strokes, glyph marks, selection, and the focus outline, and On Signal for any text that sits on a Signal fill.",
+      "Do place logos, screenshots, and technology icons directly on the sheet: a 1px Rule hairline on icon cells and screenshot frames, a 12px radius and no border on logo boxes, and no white tile anywhere.",
+      "Do keep the arm two-tone (gradient steel links, dark Joint housings) with a 2-unit Arm Line outline on every part, standing on its 180-wide plate on the full-width hatched floor.",
+      "Do separate content with 1px Rule hairlines and frame hard objects with 1px Ink; reserve the 2px stroke for the hero's mint rule.",
+      "Do keep corners square except the 12px radius on touchable cells (hero icon links, the RESUME button, logo boxes, skill cells), and keep hover motion to color transitions of 150 to 200ms and the skill cell's 4px lift; the only other timed motion is the arm's trapezoidal profile, the chevron's 2.1s bob, and the overlay's 160 to 180ms open and close.",
+      "Do honor prefers-reduced-motion (static arm pose before first paint, no chevron bob, no overlay rise, scroll-behavior: auto) and keep Escape-to-close, backdrop dismissal, and focus on the close button.",
+      "Do keep the six-station rail beside the arm as the desktop nav, with the gripper aiming at and opening on the active station, and hand navigation to the header links between 768px and 1024px and to the header menu below that, where six labels would be unusable tap targets."
+    ],
+    "donts": [
+      "Don't use orange or yellow as the signal, or anywhere else; don't push the sheet toward blueprint blue or pale blue; and don't put a grid, grain, vignette, or any texture on the ground. All were tried and rejected.",
+      "Don't reintroduce a light theme, a theme toggle, a stored theme preference, or a pre-paint theme script; the sheet is navy and color-scheme is dark.",
+      "Don't draw the arm in a blue on the navy sheet, and don't merge its parts into one unoutlined mass.",
+      "Don't map sections onto the arm's parts: no joint numbers on the labels, no Signal-filled link, no leader lines from the rail to the arm. Sections are stations and poses; the arm is one object that points at them.",
+      "Don't add a second glass, blurred, or shadowed surface, gradient text, or a third gradient; the header is the one lit surface and depth elsewhere is a border weight or the Scrim token.",
+      "Don't let the drawing metaphor leave the arm, its rail, and the hero: no parts lists, DETAIL sheets, legends, NOTES blocks, dimension leaders in sections, or robot puns in copy or the 404.",
+      "Don't add eyebrows or kickers above headings; the only small uppercase text above a value is the STACK label in the overlay.",
+      "Don't use the axis red, green, or blue outside the arm SVG, and don't use Signal as a content background.",
+      "Don't hard-code a hex in a component; the only literal colors are the header glass's alpha values, the favicon, and the 404's standalone stylesheet.",
+      "Don't put a white tile behind a logo, screenshot, or icon, and don't bring back the frame token.",
+      "Don't introduce scroll reveals, parallax, or animated counters, and don't add hover transforms beyond the skill cell's 4px lift.",
+      "Don't use the display face for anything but the name, osifont outside an SVG, or a rounded corner outside the four touchable cells."
+    ]
+  }
+}

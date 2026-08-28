@@ -1,0 +1,105 @@
+{
+  "title": "Bolder hand for akshaisrin.live",
+  "question": "Foreign forms at full commitment. The deal put Nixie Lab Counter in the lead; Acetate Manual beat it on both axes. Pick one, or re-roll again.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Nixie Lab Counter",
+      "kicker": "THE ROLL",
+      "lineage": "nixie-tube laboratory counters",
+      "thesis": "The portfolio as a bench instrument whose proof is counted in plasma: real metrics glow in glass tubes on a blackened-steel panel engraved with the name.",
+      "palette": ["#0B0C0E", "#FF7A1A", "#5A5F66", "#C9CED4"],
+      "materials": ["blackened steel chassis", "glass tube envelopes", "orange cathode glow", "engraved panel caps", "bronze anode mesh"],
+      "viewport": "A steel instrument front panel. Engraved nameplate: AKSHAI SRINIVASAN, model line CE + AMATH · UNIVERSITY OF WASHINGTON. Below it a legend strip engraves the three running roles: GM Cruise MLE Intern, UW WEIRD Lab RL research, DubHacks Director of Technology. Across the panel, tube banks count up the real proof on load: HACKERS SERVED 1200, STUDENTS 1200, APPLICATIONS REVIEWED 1800, EDGE REQUESTS 376000, each digit a physical depth change. A rotary range selector is the section nav (About, Experience, Projects, Skills, Contact). Two jewel-lamp push buttons are the actions: RESUME and EMAIL. One bank is labeled BOBA and overflows. On phones the banks drop to essential digits.",
+      "risk": "Blackened steel and orange glow is the near-black-with-one-neon-accent look this redesign exists to leave; it survives only if glass, mesh, and engraved steel are physically rendered, never flat glow CSS. A counter is about quantities: the who and the direction need engraved prose that a counter panel does not naturally carry.",
+      "raised": [
+        { "from": "Struck Cathode Gauze", "raise": "No boxes, rules, or dividers anywhere: grouping is done by glow depth and mesh density alone." },
+        { "from": "Mesophotic Deep Dive", "raise": "One vertical axis rules the page: every experience and project is pinned to its date on a single engraved timeline." }
+      ],
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-nixie-laboratory-counter-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-nixie-laboratory-counter.webp"
+    },
+    {
+      "id": "challenger-manual",
+      "label": "Acetate Manual",
+      "verdict": "wins",
+      "lineage": "boxed-software reference manuals with tabbed divider boards",
+      "thesis": "Akshai, Reference Manual, Release 2026.08: each section a full-strength colored divider board, every fact printed on a milk-acetate leaf hinged above it, the whole extent drawn as a tab rail down the fore edge.",
+      "palette": ["#F5C400", "#E8571C", "#1F6F8B", "#2A4DB5", "#F2F4F5", "#1A1A1A"],
+      "materials": ["chrome-yellow divider board", "milk acetate leaves", "punched binding holes", "one short hard shadow", "mono machine voice"],
+      "viewport": "A manual lying open. The chrome-yellow board fills the viewport edge to edge; a milk-acetate title leaf hinges a millimetre above it: AKSHAI SRINIVASAN, Reference Manual, Release 2026.08, then a Configuration block listing the three roles and CE + AMATH @ UW. RESUME and EMAIL are printed as keystroke legends on the acetate template. Down the right fore edge, a stepped tab rail: About, Experience (oxide orange), Projects (teal), Skills (ultramarine), Contact (violet), each tab's height proportional to its length; the current tab extends and becomes the board. Nothing eases: every hinge is a 90ms two-frame step.",
+      "case": "Recruiters and engineers read a manual instantly and it structures a resume better than any counter; the section boards at full strength carry more color than the whole category dares.",
+      "risk": "Slides into the editorial rut if the boards are not held at full strength; a manual's dry tone means the playful streak must live in errata slips and margin notes, deliberately.",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board.webp"
+    },
+    {
+      "id": "challenger-bitmap",
+      "label": "Bitmap Specimen",
+      "verdict": "competitive",
+      "lineage": "Emigre bitmap type specimens",
+      "thesis": "The name set proudly in coarse pixels at poster scale; the low resolution is the aesthetic, and the retro-game streak is the headline.",
+      "palette": ["#F4F1EA", "#111111", "#00E5A0"],
+      "materials": ["newsprint white", "rich black", "one synthetic accent", "halftone and dot-matrix texture"],
+      "viewport": "AKSHAI SRINIVASAN built from visible pixels towers over dense justified columns; the same face repeats at five sizes down to smooth gray text carrying the three roles. A bitmap/smooth toggle is an honest state. Resume and email are specimen footnotes in the accent.",
+      "case": "Clearer than the counter at poster scale, but it says games, not robotics, so the primary audience identifies less.",
+      "risk": "Reads as a designer's type poster; pixels must scale only in whole multiples or the whole idea collapses.",
+      "hero": "https://impeccable.style/worlds/cards/emigre-bitmap-specimen-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/emigre-bitmap-specimen.webp"
+    },
+    {
+      "id": "challenger-azulejo",
+      "label": "Azulejo Hall",
+      "verdict": "competitive",
+      "lineage": "tin-glazed tile station halls",
+      "thesis": "A hall of cobalt-on-white narrative panels: each experience painted as a scene, grout seams running straight through it, a cartouche naming the year.",
+      "palette": ["#FFFFFF", "#1F49A8", "#E0B31C"],
+      "materials": ["tin-glazed tiles", "cobalt wash and line", "grout seams", "scrolled borders", "mustard only inside frames"],
+      "viewport": "A panel sixty tiles wide: a cobalt line painting of a robot arm over a hackathon floor, cartouche reading AKSHAI SRINIVASAN · SEATTLE · MMXXVI, the three roles brushed in roman caps along the border frieze. Resume and email as painted plaques. Layout snaps to whole tiles; sections are framed panels walked in order.",
+      "case": "A walkable sequence of framed panels is clearer than banks of digits, but nobody in the audience identifies with a tile hall, and every scene must be authored as line art.",
+      "risk": "Requires real illustration per experience; without it the tiles are empty and the world is wallpaper.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-places-azulejo-station-hall-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/architecture-places-azulejo-station-hall.webp"
+    },
+    {
+      "id": "challenger-gauze",
+      "label": "Struck Cathode Gauze",
+      "verdict": "declined",
+      "lineage": "decade counters behind anode gauze",
+      "thesis": "Every role and project present at once as a dark ghost; the chosen one struck forward in orange.",
+      "palette": ["#0A0F1F", "#FF8C1A", "#8C6A3C"],
+      "materials": ["ink-blue black", "bronze wire gauze", "ghost text at depth"],
+      "viewport": "An unframed plane of ghosted names with one struck forward.",
+      "case": "Materially a twin of the leader with worse scanability: ghost text everywhere is the opposite of what a skimming recruiter needs.",
+      "kept": "No boxes or dividers; grouping by depth.",
+      "risk": "Unreadable at a glance.",
+      "hero": "https://impeccable.style/worlds/cards/operate-b-struck-cathode-gauze-hero.webp"
+    },
+    {
+      "id": "challenger-dive",
+      "label": "Mesophotic Dive",
+      "verdict": "declined",
+      "lineage": "technical deep dives down a volcanic wall",
+      "thesis": "Scrolling is descent: surface, thermocline, reef, wall, ascent home.",
+      "palette": ["#08213F", "#03102A", "#2EE6FF", "#F5F7F8"],
+      "materials": ["abyssal blue", "marine snow", "thermocline cyan band", "dive-computer digits"],
+      "viewport": "A depth gauge tracks the scroll; sections deepen in blue.",
+      "case": "The depth metaphor is generic and cyan on dark blue is the other half of the rut.",
+      "kept": "One vertical axis; every fact pinned to its exact position on it.",
+      "risk": "Pretty scroll effect, no product meaning.",
+      "hero": "https://impeccable.style/worlds/cards/rivers-tides-ocean-depths-mesophotic-deep-dive-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The developer portfolio this category ships, executed impeccably: name, typed roles, social icons, card grid.",
+    "palette": ["#0A0A0A", "#F5F5F5", "#6366F1"],
+    "materials": ["clean grid", "glass cards", "one accent"],
+    "viewport": "Centered name and one-line identity, social row, sections stacked below with a card grid of projects.",
+    "risk": "Indistinguishable from every other CS student portfolio by design."
+  },
+  "steer": true
+}

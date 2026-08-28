@@ -1,0 +1,151 @@
+{
+  "title": "Round 2 for akshaisrin.live",
+  "question": "Robotics-grounded, wow without overdoing it. The roll assigned Perception Overlay; Kinematic Blueprint is my pick. Choose, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Perception Overlay",
+      "kicker": "THE ROLL",
+      "lineage": "AV and robot perception debug views (detections, tracks, depth)",
+      "thesis": "The site is what the robot sees: real photographs annotated live by a perception stack, with the resume as a multi-object tracking timeline.",
+      "palette": ["#F3F4F2", "#121416", "#B6FF3B", "#19D3E6", "#FF3FB4", "#FFB000"],
+      "materials": ["full-bleed real photographs", "hairline detection boxes", "flat translucent segmentation masks", "turbo-colormap depth", "mono HUD readouts on neutral instrument chrome"],
+      "viewport": "A full-bleed real photo of Akshai. On load a perception pass runs once: a hairline box draws around him, the label types in as PERSON 0.99 then resolves to AKSHAI SRINIVASAN, keypoints land, the mask fills. Top HUD strip: frame counter, timestamp 2026-08-27, camera FRONT_CENTER, and two actions, RESUME.PDF and EMAIL. Beside the box, an attributes panel in mono: role MLE Intern @ GM Cruise, edu CE + AMATH @ UW, org DubHacks Director of Technology. A three-way layer switch, RGB / DEPTH / SEG, re-renders every image on the site. Scrolling annotates each section's imagery as it enters. Experience is a tracking timeline: each org a track with a real start and end, current roles marked LIVE. Projects are detections shelved by class: ROBOTICS & RL, SYSTEMS & INFRA, GAMES & PLAY. The BDX duck is detected as DROID 0.97; a boba cup gets its own box. On phones the photo crops portrait and the HUD moves to the bottom.",
+      "risk": "Boxes on photos is a familiar AI-company trope; it survives only with real photographs, overlays authored per image with true geometry, and one pass per image, never a screen full of boxes. Confidence values are the form's grammar and must never read as claims about people or work. Needs two to four real photos from you: with hardware, at DubHacks, in the lab.",
+      "raised": [
+        { "from": "Screenprint Overlap", "raise": "Registration is visible: the layer legend (RGB / DEPTH / SEG) and registration crosses stay in the margin on every annotated image." },
+        { "from": "Secession Page", "raise": "Prose gets a clearing: the About paragraph and every body text sits in clean, unannotated space; overlays stop at the image edge." },
+        { "from": "Drum Machine Step Row", "raise": "A NOW marker never leaves the screen: the HUD's frame counter and timestamp always say where you are, and current roles read LIVE." },
+        { "from": "Akari Workshop", "raise": "Mobile collapse discipline: annotations fold to their box outline and reopen on tap." },
+        { "from": "Rain-Night Cityscape", "raise": "Multi-track sync: the experience timeline stacks orgs as time-aligned channels, like sensor tracks in one log." }
+      ],
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          { "label": "HUD: frame · timestamp · camera · RESUME.PDF · EMAIL", "x": 0, "y": 0, "w": 12, "h": 1, "accent": true },
+          { "label": "full-bleed real photo", "x": 0, "y": 1, "w": 12, "h": 9 },
+          { "label": "detection box: AKSHAI SRINIVASAN 0.99", "x": 3, "y": 2, "w": 4, "h": 6, "accent": true },
+          { "label": "attributes: role · edu · org", "x": 8, "y": 3, "w": 4, "h": 3, "accent": true },
+          { "label": "layer switch RGB / DEPTH / SEG", "x": 0, "y": 9, "w": 4, "h": 1 }
+        ]
+      }
+    },
+    {
+      "id": "model-pick",
+      "label": "Kinematic Blueprint",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "URDF / engineering drawings of robot arms with joint frames and a title block",
+      "thesis": "The site is the engineering drawing of a six-axis arm whose joints are the sections; scrolling articulates the chain.",
+      "palette": ["#FFFFFF", "#111111", "#FF5A1F", "#E23A3A", "#2BB673", "#2F6FE4"],
+      "materials": ["white drawing sheet", "hairline ink linework", "RGB xyz joint triads", "dimension lines and leaders", "engineering title block"],
+      "viewport": "A six-axis arm drawn in line art across the whole sheet, joint frames J1 to J6 labeled with xyz triads; each joint is a section (About, Experience, Projects, Skills, Resume, Contact). Bottom-right, a real engineering title block: TITLE Akshai Srinivasan, ROLE MLE Intern @ GM Cruise, EDU CE + AMATH @ UW, ORG DubHacks Dir. of Technology, DATE 2026-08, REV 3, with RESUME.PDF and EMAIL as title-block fields. Scrolling rotates the joints; the arm reaches each section.",
+      "risk": "Blueprint aesthetics are a known trope and this is where many engineering portfolios land; if the arm does not actually articulate it is a poster.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          { "label": "six-axis arm line drawing with joint frames", "x": 0, "y": 0, "w": 9, "h": 8, "accent": true },
+          { "label": "dimension notes", "x": 9, "y": 0, "w": 3, "h": 4 },
+          { "label": "title block: name · role · edu · RESUME · EMAIL", "x": 6, "y": 8, "w": 6, "h": 2, "accent": true }
+        ]
+      }
+    },
+    {
+      "id": "challenger-zine",
+      "label": "Technical Zine",
+      "verdict": "competitive",
+      "lineage": "hand-drawn technical explainer zines",
+      "thesis": "The playful streak at full volume: marker headlines, doodled diagrams, a mascot, and highlighter swipes teaching who Akshai is.",
+      "palette": ["#F6F1E4", "#111111", "#FFE03A", "#FF6FB5", "#25C7B7"],
+      "materials": ["cream paper", "black marker", "highlighter yellow, pink, teal", "hand-drawn SVG arrows"],
+      "viewport": "A marker headline with the name, a doodled robot arm diagram with looping arrows to the three roles, a sketched table of contents down the side.",
+      "case": "Instantly readable and warm, but you chose professional with a streak, and cream plus marker reads student project to a recruiter.",
+      "risk": "Cream paper and marker is a rut of its own; the mascot has to be drawn well or it is clip art.",
+      "hero": "https://impeccable.style/worlds/cards/hand-drawn-zine-explainer-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/hand-drawn-zine-explainer.webp"
+    },
+    {
+      "id": "challenger-screenprint",
+      "label": "Screenprint Overlap",
+      "verdict": "declined",
+      "lineage": "misregistered spot-color screenprints",
+      "thesis": "Sections as translucent cyan, amber, and scarlet passes that mix where they overlap.",
+      "palette": ["#FBF7F0", "#1FB8D6", "#F2A41B", "#E0322B"],
+      "materials": ["mulberry paper", "translucent inks", "registration crosses"],
+      "viewport": "The name as a stencil banner, roles as overprinted passes drifting out of register.",
+      "case": "No robotics reading and overprint ghosts hurt scanability.",
+      "kept": "Registration marks and a visible layer legend.",
+      "risk": "Decorative.",
+      "hero": "https://impeccable.style/worlds/cards/ink-pigment-printmaking-screenprint-transparent-overlap-hero.webp"
+    },
+    {
+      "id": "challenger-secession",
+      "label": "Secession Page",
+      "verdict": "declined",
+      "lineage": "Krakow secession review pages",
+      "thesis": "A folk-flower border grows in from the margins around one calm column.",
+      "palette": ["#F4EEDF", "#4E7A3A", "#C98A8E", "#3A4652"],
+      "materials": ["ivory stock", "flat ornament with fine outline", "hand-drawn lettering"],
+      "viewport": "Ornament growing inward around the name and a single column of prose.",
+      "case": "Beautiful and unrelated to an engineer; nobody in the audience identifies.",
+      "kept": "Prose sits in a clearing, never overlaid.",
+      "risk": "Pure ornament.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-mloda-polska-secession-page-hero.webp"
+    },
+    {
+      "id": "challenger-drum",
+      "label": "Drum Machine Step Row",
+      "verdict": "declined",
+      "lineage": "early-80s rhythm machine panels",
+      "thesis": "The resume as sixteen candy-colored steps under a chase light.",
+      "palette": ["#2B2B2B", "#E5322D", "#F58220", "#F5D000", "#F2F2F2"],
+      "materials": ["charcoal panel", "candy step keys", "lit LEDs", "silkscreen labels"],
+      "viewport": "A step row timeline with the chase light on now.",
+      "case": "Musicians identify, recruiters do not; the metaphor says nothing about robotics.",
+      "kept": "A NOW marker that never leaves the screen.",
+      "risk": "Novelty instrument.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp"
+    },
+    {
+      "id": "challenger-akari",
+      "label": "Akari Workshop",
+      "verdict": "declined",
+      "lineage": "washi and bamboo light sculptures",
+      "thesis": "Sections as glowing paper volumes in a dim room.",
+      "palette": ["#F7EBD0", "#C9A46C", "#2E2A26", "#D93B2B"],
+      "materials": ["candlelit washi", "bamboo ribs", "one vermilion stamp"],
+      "viewport": "Warm paper moons hanging at different heights, the name brush-stamped.",
+      "case": "Serene and meaningless for this product.",
+      "kept": "Small screens collapse volumes to outlines that reopen on tap.",
+      "risk": "Mood, not a system.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-akari-light-sculpture-hero.webp"
+    },
+    {
+      "id": "challenger-city",
+      "label": "Rain-Night Cityscape",
+      "verdict": "declined",
+      "lineage": "blue-hour to rain-dark urban nocturne",
+      "thesis": "Seattle at night, transit veins and wet-street reflections as the ground.",
+      "palette": ["#0B1B3A", "#050608", "#F2A93B", "#C9D3DC"],
+      "materials": ["cobalt blue hour", "black towers", "amber transit lines", "wet reflections"],
+      "viewport": "A skyline band, a street band, a reflection band; the name in neon lettering.",
+      "case": "AV people half-identify, but a city nocturne says nothing about Akshai and it is the dark-and-glow rut again.",
+      "kept": "Time-aligned stacked bands, like sensor tracks in one log.",
+      "risk": "Atmosphere without content.",
+      "hero": "https://impeccable.style/worlds/cards/light-shadow-caustics-rain-night-cityscape-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The developer portfolio this category ships, executed impeccably: name, typed roles, social icons, card grid.",
+    "palette": ["#0A0A0A", "#F5F5F5", "#6366F1"],
+    "materials": ["clean grid", "glass cards", "one accent"],
+    "viewport": "Centered name and one-line identity, social row, sections stacked below with a card grid of projects.",
+    "risk": "Indistinguishable from every other CS student portfolio by design."
+  },
+  "steer": true
+}

@@ -1,120 +1,89 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { RESUME_URL, SECTIONS } from '../data/sections';
 
-const Header = () => {
+const Header = ({ active, onNavigate }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
-  // If someone lands on a deep-link (e.g. `/#projects`), ensure we scroll to the
-  // matching section once the initial render completes.
-  useEffect(() => {
-    const rawHash = window.location.hash || '';
-    const id = rawHash.startsWith('#') ? rawHash.slice(1) : rawHash;
-    const valid = new Set(['home', 'experience', 'projects', 'skills']);
-    if (!id || !valid.has(id)) return;
-
-    setActiveSection(id);
-    // Wait a tick so the section elements exist in the DOM.
-    setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'auto' }), 0);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'experience', 'projects', 'skills'];
-      const scrollPos = window.scrollY + window.innerHeight * 0.5;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.offsetTop <= scrollPos) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    // Keep the URL in sync so `/projects` etc work like deep-links.
-    // Note: on full page reload GitHub Pages will still serve `404.html`,
-    // which redirects to `/#projects` (so the path may not persist).
-    const baseUrl = (process.env.PUBLIC_URL || '').replace(/\/$/, '');
-    const nextPath = id === 'home' ? (baseUrl || '/') : `${baseUrl}/${id}`;
-    window.history.pushState({}, '', nextPath);
+  const go = (id) => {
+    onNavigate(id);
     setMenuOpen(false);
   };
 
-  const navLinkClass = (id) =>
-    activeSection === id
-      ? 'hover-glow font-semibold text-violet-400 transition cursor-pointer'
-      : 'hover-glow transition cursor-pointer';
+  const linkClass = (id) =>
+    `font-cad uppercase tracking-wide no-underline hover:text-signal-ink ${
+      active === id ? 'text-signal-ink underline decoration-1 underline-offset-[6px]' : 'text-ink'
+    }`;
 
-  const glassBar =
-    'border-b border-white/[0.06] bg-[#050308]/92 backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.55),inset_0_-1px_0_0_rgba(167,139,250,0.14)] supports-[backdrop-filter]:bg-[#050308]/82';
+  const items = SECTIONS.map((s) =>
+    s.href ? (
+      <a
+        key={s.id}
+        href={s.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkClass(s.id)}
+        onClick={() => setMenuOpen(false)}
+      >
+        {s.label}
+      </a>
+    ) : (
+      <button
+        key={s.id}
+        type="button"
+        onClick={() => go(s.id)}
+        className={linkClass(s.id)}
+        aria-current={active === s.id ? 'location' : undefined}
+      >
+        {s.label}
+      </button>
+    )
+  );
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 overflow-x-visible">
-      <div className={`${glassBar} text-white flex justify-between items-center py-6 px-6 md:px-14`}>
+    <header className="fixed left-0 top-0 z-40 w-full border-b border-white/[0.06] bg-[rgba(15,31,61,0.78)] shadow-[0_8px_32px_-8px_rgba(0,0,0,0.55),inset_0_-1px_0_0_rgba(61,220,132,0.14)] backdrop-blur-xl supports-[backdrop-filter]:bg-[rgba(15,31,61,0.42)]">
+      <div className="flex h-14 items-center justify-between px-5 lg:px-8">
         <button
           type="button"
-          onClick={() => scrollTo('home')}
-          className="font-display flex items-center gap-0 text-2xl font-bold tracking-tight text-white transition hover:opacity-85"
-          aria-label="Akshai Srinivasan — home"
+          onClick={() => go('hero')}
+          className="font-cad text-[1.05rem] uppercase tracking-wide text-ink hover:text-signal-ink"
+          aria-label="Akshai Srinivasan, back to top"
         >
-          <span>A</span>
-          <span
-            className="mx-2 inline-block h-2 w-2 shrink-0 rotate-45 bg-gradient-to-br from-violet-300 to-indigo-400 shadow-[0_0_16px_rgba(167,139,250,0.55)]"
-            aria-hidden
-          />
-          <span>S</span>
+          Akshai Srinivasan
         </button>
 
-        <nav className="hidden md:flex space-x-8">
-          <button onClick={() => scrollTo('home')} className={navLinkClass('home')}>Home</button>
-          <button onClick={() => scrollTo('experience')} className={navLinkClass('experience')}>Experience</button>
-          <button onClick={() => scrollTo('projects')} className={navLinkClass('projects')}>Projects</button>
-          <button onClick={() => scrollTo('skills')} className={navLinkClass('skills')}>Skills</button>
-          <a
-            href={require('../assets/files/Akshai Srinivasan- Resume.pdf')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover-glow transition"
-          >
-            Resume
-          </a>
+        {/* From lg up the rail beside the arm is the nav; the header only carries links where the rail is absent. */}
+        <nav className="hidden items-center gap-7 text-[0.95rem] md:flex lg:hidden" aria-label="Primary">
+          {items}
         </nav>
 
-        <button
-          className="md:hidden text-white ml-auto pr-2"
-          onClick={() => setMenuOpen(!menuOpen)}
+        {/* Desktop: one action instead of a second menu. */}
+        <a
+          href={RESUME_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden items-center gap-1.5 rounded-xl border border-signal px-4 py-2 font-cad text-[0.95rem] uppercase tracking-wide text-signal-ink no-underline transition-colors hover:bg-signal hover:text-on-signal lg:inline-flex"
         >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          Resume
+          <ArrowUpRight className="h-4 w-4" strokeWidth={2} aria-hidden />
+        </a>
+
+        <button
+          type="button"
+          className="flex h-10 w-10 items-center justify-center text-ink md:hidden"
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        >
+          {menuOpen ? <X size={24} aria-hidden /> : <Menu size={24} aria-hidden />}
         </button>
       </div>
 
       {menuOpen && (
-        <div
-          className={`${glassBar} text-white flex flex-col items-start px-6 pb-5 pt-1 md:hidden space-y-4 border-t border-white/[0.05]`}
-        >
-          <button onClick={() => scrollTo('home')} className={navLinkClass('home')}>Home</button>
-          <button onClick={() => scrollTo('experience')} className={navLinkClass('experience')}>Experience</button>
-          <button onClick={() => scrollTo('projects')} className={navLinkClass('projects')}>Projects</button>
-          <button onClick={() => scrollTo('skills')} className={navLinkClass('skills')}>Skills</button>
-          <a
-            href={require('../assets/files/Akshai Srinivasan- Resume.pdf')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover-glow transition"
-            onClick={() => setMenuOpen(false)}
-          >
-            Resume
-          </a>
-        </div>
+        <nav className="flex flex-col items-start gap-4 border-t border-rule px-5 pb-5 pt-4 text-[1.05rem] md:hidden" aria-label="Primary">
+          {items}
+        </nav>
       )}
-
     </header>
   );
 };
