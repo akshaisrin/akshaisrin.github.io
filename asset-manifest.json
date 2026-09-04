@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0bbc94b7.css",
-    "main.js": "/static/js/main.7fbe46f5.js",
+    "main.css": "/static/css/main.f12ec3c3.css",
+    "main.js": "/static/js/main.96ecb794.js",
     "static/js/488.1446b851.chunk.js": "/static/js/488.1446b851.chunk.js",
     "static/media/TCALogo.png": "/static/media/TCALogo.b989342544b674ebf7a3.png",
     "static/media/mathmaestro.png": "/static/media/mathmaestro.6cf473ddc3b3bfd5cb63.png",
@@ -15,7 +15,7 @@
     "static/media/osifont.ttf": "/static/media/osifont.42b2346dbbecfbcea684.ttf",
     "static/media/tradinghub.jpeg": "/static/media/tradinghub.0f4c2459255c506925f3.jpeg",
     "static/media/google.png": "/static/media/google.429f1f8918a380761c3f.png",
-    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.242c0c53e77183dc39e1.pdf",
+    "static/media/Akshai Srinivasan- Resume.pdf": "/static/media/Akshai Srinivasan- Resume.c402b31ebbec90468c8f.pdf",
     "static/media/matlab.png": "/static/media/matlab.560187d1130720ba0fcd.png",
     "static/media/scouting_app.png": "/static/media/scouting_app.f048f35c34332481d753.png",
     "static/media/dart.png": "/static/media/dart.2b8404dc9215f1cea757.png",
@@ -46,12 +46,12 @@
     "static/media/hugging.png": "/static/media/hugging.6d0d997de0504608634d.png",
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/index.html",
-    "main.0bbc94b7.css.map": "/static/css/main.0bbc94b7.css.map",
-    "main.7fbe46f5.js.map": "/static/js/main.7fbe46f5.js.map",
+    "main.f12ec3c3.css.map": "/static/css/main.f12ec3c3.css.map",
+    "main.96ecb794.js.map": "/static/js/main.96ecb794.js.map",
     "488.1446b851.chunk.js.map": "/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bbc94b7.css",
-    "static/js/main.7fbe46f5.js"
+    "static/css/main.f12ec3c3.css",
+    "static/js/main.96ecb794.js"
   ]
 }
