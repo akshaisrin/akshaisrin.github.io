@@ -11,13 +11,13 @@ const experience = [
   {
     company: 'General Motors: Cruise',
     position: 'Software Engineering Intern',
-    year: 'June 2026 – Present',
+    year: 'June 2026 – Sep 2026',
     location: 'Sunnyvale, CA',
     summary: 'AV infrastructure and ROS visualization for Super Cruise',
-    description: `Developing autonomous vehicle infrastructure for a web-based platform visualizing multi-source ROS data streams
-                  Accelerating machine learning workflows by optimizing spatial data rendering tools used to validate perception and localization model outputs
-                  Optimizing 3D panel data hierarchy interface to streamline how engineers navigate, filter, and render dense spatial datasets and real-time sensor logs`,
-    skills: ['TypeScript', 'ROS', 'Python', 'Webviz.io', 'Git'],
+    description: `Developed autonomous vehicle infrastructure for a web-based platform visualizing multi-source ROS data streams
+                  Engineered a diagnostic telemetry tool that generates failure reports, provisions GCS buckets via Terraform for log retention, and dispatches Slack alerts for developer triage
+                  Shipped 4 features streamlining topic tree navigation for 800+ users, including availability filtering for node inputs based on ROS bag contents`,
+    skills: ['TypeScript', 'ROS', 'GCP', 'Terraform', 'Git'],
     image: GMLogo,
   },
   {
@@ -54,7 +54,8 @@ const experience = [
     description: `Founded and leading a 40+ member student organization to deliver AI-driven tech solutions for businesses
                   Built pipeline of 6 active client projects within 3 months, including computer vision analytics for regional bagel chain and cloud infrastructure migration for municipal fire department
                   Developed agentic AI outreach bot that utilizes the Anthropic/Claude API to discover and initiate first-level sales funnel contact with potential clients (2000+ leads)
-                  Established strategic partnerships and client relations with Pinterest, SAP, Accenture, and the Seattle Mariners`,
+                  Drove corporate engagement and event strategy by partnering with companies including OpenAI, Meta, Microsoft, Bain & Co., Liberty Global, Deloitte, Accenture, and the Seattle Mariners
+`,
     skills: ['Python', 'Claude API'],
     image: TCALogo,
   },
