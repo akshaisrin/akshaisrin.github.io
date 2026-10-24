@@ -42,7 +42,7 @@ export default function DetailSheet({ open, onClose, title, subtitle, meta, chil
             role="dialog"
             aria-modal="true"
             aria-labelledby="sheet-title"
-            className="relative z-10 my-auto max-h-[100dvh] w-full max-w-3xl overflow-y-auto border border-ink bg-sheet p-6 sm:max-h-[90vh] sm:p-9"
+            className="relative z-10 my-auto max-h-[100dvh] w-full max-w-3xl overflow-y-auto rounded-t-3xl border border-rule-2 bg-surface p-6 sm:max-h-[90vh] sm:rounded-3xl sm:p-9"
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, ...slide }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,13 +54,13 @@ export default function DetailSheet({ open, onClose, title, subtitle, meta, chil
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center border border-rule text-ink hover:border-ink hover:bg-rule-2 sm:right-6 sm:top-6"
+              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl border border-rule-2 text-ink transition-colors hover:border-coral hover:text-coral sm:right-6 sm:top-6"
             >
               <X className="h-5 w-5" strokeWidth={1.75} aria-hidden />
             </button>
 
             <header className="pr-12">
-              <h2 id="sheet-title" className="font-cad text-[1.75rem] leading-tight tracking-wide sm:text-[2rem]">
+              <h2 id="sheet-title" className="text-[1.75rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">
                 {title}
               </h2>
               {subtitle && <p className="mt-1 text-ink-2">{subtitle}</p>}
@@ -84,8 +84,8 @@ export function Bullets({ text }) {
     <ul className="m-0 max-w-measure list-none space-y-3 p-0">
       {lines.map((line) => (
         <li key={line} className="flex gap-3">
-          <span className="mt-[0.7em] h-1.5 w-1.5 shrink-0 bg-ink" aria-hidden />
-          <span>{line}</span>
+          <span className="mt-[0.6em] h-2 w-2 shrink-0 rounded-full bg-butter" aria-hidden />
+          <span className="text-ink-2">{line}</span>
         </li>
       ))}
     </ul>
@@ -95,10 +95,10 @@ export function Bullets({ text }) {
 export function StackList({ items }) {
   return (
     <div className="mt-7">
-      <h3 className="font-cad text-[0.8rem] uppercase tracking-widest text-ink-3">Stack</h3>
-      <ul className="mt-2 flex list-none flex-wrap gap-2 p-0">
+      <h3 className="font-mono text-[0.75rem] uppercase tracking-[0.12em] text-ink-3">Stack</h3>
+      <ul className="mt-3 flex list-none flex-wrap gap-2 p-0">
         {items.map((s) => (
-          <li key={s} className="border border-rule px-2.5 py-1 text-[0.85rem] text-ink-2">
+          <li key={s} className="rounded-full border border-rule-2 bg-bg px-3 py-1 text-[0.85rem] text-ink-2">
             {s}
           </li>
         ))}

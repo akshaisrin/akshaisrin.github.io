@@ -28,3 +28,6 @@ yarn-error.log*
 
 # local Claude Code tooling
 /.claude
+
+# Playwright MCP screenshots and logs
+/.playwright-mcp

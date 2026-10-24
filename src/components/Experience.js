@@ -4,7 +4,7 @@ import NeptuneImage from '../assets/images/Neptune.jpeg';
 import TCALogo from '../assets/images/TCALogo.png';
 import AllenLogo from '../assets/images/allen.jpg';
 import GMLogo from '../assets/images/gm.jpg';
-import SectionHeading from './SectionHeading';
+import SectionHeading, { sectionClass } from './SectionHeading';
 import DetailSheet, { Bullets, StackList } from './DetailSheet';
 
 const experience = [
@@ -77,25 +77,30 @@ const experience = [
 const ExperienceRow = ({ item }) => {
   const [open, setOpen] = useState(false);
   return (
-    <li className="border-b border-rule">
+    <li>
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="group grid w-full grid-cols-[3.5rem_1fr] gap-x-5 gap-y-1 py-6 text-left sm:grid-cols-[4.5rem_1fr]"
+        className="group grid w-full grid-cols-[3.5rem_1fr] gap-x-5 rounded-2xl border border-transparent p-4 text-left transition-colors hover:border-rule hover:bg-surface sm:grid-cols-[4.5rem_1fr] sm:p-5 md:grid-cols-[4.5rem_1fr_auto]"
         aria-haspopup="dialog"
       >
         <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl sm:h-[4.5rem] sm:w-[4.5rem]">
           <img src={item.image} alt="" className="h-full w-full object-contain" />
         </span>
         <span className="min-w-0">
-          <span className="block font-cad text-[1.2rem] leading-tight tracking-wide group-hover:text-signal-ink sm:text-[1.3rem]">
+          <span className="block text-[1.2rem] font-bold leading-tight tracking-tight transition-colors group-hover:text-blue-ink sm:text-[1.3rem]">
             {item.company}
           </span>
-          <span className="mt-0.5 block text-ink-2">{item.position}</span>
-          <span className="tnum mt-1 block font-mono text-[0.8rem] text-ink-3">
+          <span className="mt-0.5 block font-medium text-ink-2">{item.position}</span>
+          <span className="tnum mt-1 block font-mono text-[0.8rem] text-ink-3 md:hidden">
             {item.year} · {item.location}
           </span>
           <span className="mt-3 block max-w-measure text-[0.95rem] leading-relaxed text-ink-2">{item.summary}</span>
+        </span>
+        <span className="tnum hidden text-right font-mono text-[0.8rem] leading-relaxed text-ink-3 md:block">
+          {item.year}
+          <br />
+          {item.location}
         </span>
       </button>
 
@@ -114,11 +119,14 @@ const ExperienceRow = ({ item }) => {
 };
 
 const Experience = () => (
-  <section id="experience" className="px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
-    <SectionHeading lede="My internship/work experience and other notable opportunities I've participated in! Click on any tile for more information!">
+  <section id="experience" className={sectionClass}>
+    <SectionHeading
+      accent="coral"
+      lede="My internship/work experience and other notable opportunities I've participated in! Click on any tile for more information!"
+    >
       Experience
     </SectionHeading>
-    <ul className="m-0 list-none p-0">
+    <ul className="-mx-4 my-0 list-none space-y-1 p-0 sm:-mx-5">
       {experience.map((item) => (
         <ExperienceRow key={item.company} item={item} />
       ))}

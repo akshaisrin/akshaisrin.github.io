@@ -28,7 +28,7 @@ export const skillsData = [
     category: 'Full-stack development',
     skills: [
       { name: 'Node.js', image: require('../assets/images/skills/nodejs.png') },
-      { name: 'Next.js', image: require('../assets/images/skills/nextjs.png') },
+      { name: 'Next.js', image: require('../assets/images/skills/nextjs.png'), invert: true },
       { name: 'React.js', image: require('../assets/images/skills/react.png') },
       { name: 'Tailwind.css', image: require('../assets/images/skills/tailwind.png') },
       { name: 'FastAPI', image: require('../assets/images/skills/fastapi.png')},
